@@ -99,6 +99,7 @@
   }
 
   :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  [tabindex="-1"]:focus { outline: none; }
 
   /* ---------- Header ---------- */
   header {
@@ -1048,6 +1049,57 @@
     } else {
       items.forEach((el) => el.classList.add('in'));
     }
+  </script>
+
+  <script>
+    // ===== Centered jump-to-section scrolling =====
+    (function () {
+      const HEADER = 84;
+      function prefersNoMotion() {
+        const page = document.getElementById('page');
+        return window.matchMedia('(prefers-reduced-motion: reduce)').matches
+          || (page && page.classList.contains('a11y-stop-anim'));
+      }
+      function scrollToCentered(el) {
+        const behavior = prefersNoMotion() ? 'auto' : 'smooth';
+        const vh = window.innerHeight;
+        const rect = el.getBoundingClientRect();
+        const elH = rect.height;
+        const elTop = rect.top + window.scrollY;
+        let target;
+        if (elH <= vh - HEADER - 24) {
+          target = elTop - (vh - elH) / 2;      // fits on screen: centre it
+        } else {
+          target = elTop - HEADER - 16;          // taller than screen: clear the header
+        }
+        const docH = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
+        target = Math.max(0, Math.min(target, docH - vh));
+        window.scrollTo({ top: target, behavior: behavior });
+
+        // Move focus so keyboard / screen-reader users follow, without re-scrolling.
+        const hadTab = el.hasAttribute('tabindex');
+        if (!hadTab) el.setAttribute('tabindex', '-1');
+        el.focus({ preventScroll: true });
+        if (!hadTab) {
+          el.addEventListener('blur', function clean() {
+            el.removeAttribute('tabindex');
+            el.removeEventListener('blur', clean);
+          });
+        }
+      }
+      document.addEventListener('click', function (e) {
+        const a = e.target.closest('a[href^="#"]');
+        if (!a) return;
+        const hash = a.getAttribute('href');
+        if (!hash || hash === '#') return;
+        const el = document.getElementById(hash.slice(1));
+        if (!el) return;
+        e.preventDefault();
+        scrollToCentered(el);
+        if (history.pushState) history.pushState(null, '', hash);
+        else location.hash = hash;
+      });
+    })();
   </script>
   <script>
     // ===== Mobile nav dropdown =====
