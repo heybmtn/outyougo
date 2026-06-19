@@ -318,6 +318,14 @@
     .nav-links a:hover, .nav-links a:focus-visible { background: var(--pill); color: var(--ink); }
   }
 
+  /* Narrow phones: tighten the header so the logo, phone and Menu all fit */
+  @media (max-width: 480px) {
+    .nav-right { gap: 8px; }
+    .menu-pill { padding: 14px 16px; }
+    .logo .mark { font-size: 1.3rem; }
+    .logo .sub { letter-spacing: 0.16em; }
+  }
+
   /* ============ Accessibility widget ============ */
   .a11y-widget { font-family: "Poppins", system-ui, sans-serif; }
 
