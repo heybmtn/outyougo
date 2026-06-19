@@ -165,6 +165,37 @@
   .hero .lead { font-size: 1.3rem; color: var(--body); margin: 30px 0 0; max-width: 30ch; }
   .hero .cta-row { margin-top: 44px; }
 
+  .hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 56px; align-items: center; }
+  .hero-text { min-width: 0; }
+
+  /* Photo placeholder — same sticker treatment as the buttons */
+  .hero-photo {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 5 / 4;
+    background: #eef4fe;
+    border: 2.5px solid var(--ink);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--ink-soft);
+    text-align: center;
+    padding: 24px;
+    overflow: hidden;
+  }
+  .hero-photo .ph-label { font-weight: 700; font-size: 1rem; color: var(--ink); }
+  .hero-photo .ph-hint { font-size: 0.85rem; color: var(--body); max-width: 22ch; }
+  /* When you drop in a real photo, give the <img> this class */
+  .hero-photo-img {
+    width: 100%; aspect-ratio: 5 / 4; object-fit: cover;
+    border: 2.5px solid var(--ink); border-radius: 22px; box-shadow: var(--shadow);
+    display: block;
+  }
+
   /* ---------- Section rhythm ---------- */
   section { padding: 88px 0; }
   .section-head { max-width: 620px; }
@@ -264,6 +295,8 @@
     .cards, .steps, .quotes { grid-template-columns: 1fr; }
     .menu-pill { display: inline-flex; }
     .hero { padding: 64px 0 56px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero h1 { max-width: none; }
     section { padding: 64px 0; }
 
     /* Mobile nav becomes a dropdown toggled by the Menu button */
@@ -543,12 +576,23 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="wrap">
-      <p class="eyebrow reveal">Dog walking in Woodstock, Oxfordshire</p>
-      <h1 class="reveal">Happy dogs, <span class="accent">well&#8209;walked.</span></h1>
-      <p class="lead reveal">Friendly, reliable dog walking in Woodstock and the villages around it — fully insured, DBS-checked, and genuinely dog-mad.</p>
-      <div class="cta-row reveal">
-        <a class="btn" href="#book">Book a walk</a>
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow reveal">Dog walking in Woodstock, Oxfordshire</p>
+        <h1 class="reveal">Happy dogs, <span class="accent">well&#8209;walked.</span></h1>
+        <p class="lead reveal">Friendly, reliable dog walking in Woodstock and the villages around it — fully insured, DBS-checked, and genuinely dog-mad.</p>
+        <div class="cta-row reveal">
+          <a class="btn" href="#book">Book a walk</a>
+        </div>
+      </div>
+      <div class="hero-media reveal">
+        <!-- Placeholder: replace this whole .hero-photo div with
+             <img class="hero-photo-img" src="your-photo.jpg" alt="A happy dog out on a walk in Woodstock"> -->
+        <div class="hero-photo" role="img" aria-label="Photo placeholder — add a photo of a dog out on a walk">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 16l-5-5L5 19"/></svg>
+          <span class="ph-label">Add your photo</span>
+          <span class="ph-hint">A happy dog mid-walk works best — ideally landscape.</span>
+        </div>
       </div>
     </div>
   </section>
