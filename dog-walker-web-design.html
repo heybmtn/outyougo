@@ -2,1106 +2,776 @@
 <html lang="en-GB">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Out You Go | Websites for Dog Walkers, Built by a Dog Walker</title>
-<meta name="description" content="Fast, accessible, easy-to-find websites for dog walkers across the UK, built by a working dog walker in Woodstock, Oxfordshire. Custom site, hosting and domain from £99." />
-<meta name="theme-color" content="#2f63c4" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dog Walking in Musselburgh & East Lothian | Cava Crew</title>
+<script>document.documentElement.classList.add('js');</script>
+<meta name="description" content="Friendly, insured dog walking in Musselburgh, Wallyford, Prestonpans and nearby East Lothian. Group walks, drop-in visits and occasional adventure days. DBS-checked, owner-led." />
+<meta property="og:title" content="Dog Walking in Musselburgh & East Lothian | Cava Crew" />
+<meta property="og:description" content="Friendly, insured dog walking in Musselburgh, Wallyford, Prestonpans and nearby East Lothian. Group walks, drop-in visits and occasional adventure days." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://cavacrew.co.uk/" />
+<meta property="og:image" content="https://cavacrew.co.uk/assets/hero-1600.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#BC5F2D" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:site_name" content="Cava Crew" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="geo.region" content="GB-ELN" />
+<meta name="geo.placename" content="Musselburgh, East Lothian" />
+<meta name="geo.position" content="55.9450;-3.0100" />
+<meta name="ICBM" content="55.9450, -3.0100" />
+
+<link rel="canonical" href="https://cavacrew.co.uk/" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,600&family=Poppins:wght@400;500;600;700;800&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,600&family=Poppins:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,600&family=Poppins:wght@400;500;600;700;800&display=swap" /></noscript>
-<style>
-  :root {
-    --ink:        #14213a;   /* deep navy headings */
-    --ink-soft:   #2a3550;
-    --body:       #5c6573;   /* gray body text */
-    --accent:     #3e7be8;   /* royal / cornflower blue */
-    --accent-ink: #2f63c4;
-    --pill:       #f0f1f3;   /* light gray pills */
-    --cream:      #fbf6ee;   /* warm pill (menu) */
-    --line:       #e8eaed;   /* hairlines */
-    --white:      #ffffff;
-    --shadow:     6px 6px 0 var(--ink);
-    --shadow-sm:  4px 4px 0 var(--ink);
-  }
-
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-
-  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-
-  body {
-    margin: 0;
-    font-family: "Poppins", system-ui, -apple-system, sans-serif;
-    color: var(--body);
-    background: var(--white);
-    -webkit-font-smoothing: antialiased;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
-
-  /* Offset anchor jumps so target headings clear the sticky header */
-  #top, #offer, #process, #reviews, #features, #quote { scroll-margin-top: 84px; }
-
-  .wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 24px; }
-
-  h1, h2, h3 { color: var(--ink); font-weight: 800; line-height: 1.05; letter-spacing: -0.02em; margin: 0; }
-
-  a { color: inherit; text-decoration: none; }
-
-  .sr-only {
-    position: absolute; width: 1px; height: 1px;
-    padding: 0; margin: -1px; overflow: hidden;
-    clip: rect(0,0,0,0); white-space: nowrap; border: 0;
-  }
-
-  .accent { color: var(--accent); }
-
-  .eyebrow {
-    font-weight: 700;
-    font-size: 0.82rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--accent-ink);
-    margin: 0 0 18px;
-  }
-
-  /* ---------- Signature button ---------- */
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 1.05rem;
-    color: var(--ink);
-    background: var(--white);
-    border: 2.5px solid var(--ink);
-    border-radius: 16px;
-    padding: 18px 34px;
-    cursor: pointer;
-    box-shadow: var(--shadow);
-    transition: transform .14s ease, box-shadow .14s ease;
-  }
-  .btn:hover, .btn:focus-visible {
-    transform: translate(3px, 3px);
-    box-shadow: var(--shadow-sm);
-  }
-  .btn:active { transform: translate(6px, 6px); box-shadow: 0 0 0 var(--ink); }
-
-  .btn-blue {
-    color: var(--white);
-    background: var(--accent);
-    border-color: var(--ink);
-  }
-
-  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
-  [tabindex="-1"]:focus { outline: none; }
-
-  /* ---------- Header ---------- */
-  header {
-    position: sticky; top: 0; z-index: 50;
-    background: rgba(255,255,255,0.92);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--line);
-  }
-  .nav { position: relative; display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
-
-  .logo { display: flex; flex-direction: column; line-height: 0.9; }
-  .logo .mark {
-    font-family: "Playfair Display", serif;
-    font-weight: 800;
-    font-size: clamp(1.35rem, 5.5vw, 2.1rem);
-    color: var(--ink);
-    letter-spacing: -0.01em;
-    white-space: nowrap;
-  }
-  .logo .mark .dot { color: var(--accent); }
-  .logo .sub {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-size: 0.75rem;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
-    margin-top: 4px;
-    margin-left: 3px;
-  }
-
-  .nav-right { display: flex; align-items: center; gap: 14px; }
-  .nav-links { display: flex; gap: 28px; }
-  .nav-links a { font-weight: 600; font-size: 0.95rem; color: var(--ink-soft); }
-  .nav-links a:hover { color: var(--accent); }
-
-  .phone {
-    display: inline-flex; align-items: center; justify-content: center;
-    width: 48px; height: 48px; border-radius: 50%;
-    color: var(--ink); border: 1px solid var(--line);
-  }
-  .phone:hover { color: var(--accent); border-color: var(--accent); }
-
-  .menu-pill {
-    display: none;
-    align-items: center; justify-content: center;
-    font-weight: 700; font-size: 0.95rem; color: var(--ink);
-    background: var(--white);
-    border: 2.5px solid var(--ink);
-    border-radius: 12px;
-    padding: 14px 22px;
-    box-shadow: var(--shadow-sm);
-    transition: transform .14s ease, box-shadow .14s ease;
-  }
-  .menu-pill:hover, .menu-pill:focus-visible {
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0 var(--ink);
-  }
-  .menu-pill:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--ink); }
-
-  /* ---------- Hero ---------- */
-  .hero { padding: 96px 0 88px; }
-  .hero h1 { font-size: clamp(2.7rem, 8vw, 4.6rem); max-width: 12ch; }
-  .hero .lead { font-size: 1.3rem; color: var(--body); margin: 30px 0 0; max-width: 30ch; }
-  .hero .cta-row { display: flex; align-items: center; flex-wrap: wrap; gap: 16px 26px; margin-top: 44px; }
-  .hero-play {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-weight: 700; color: var(--ink);
-    border-bottom: 2px solid var(--accent); padding: 6px 2px;
-    transition: gap .14s ease, color .14s ease;
-  }
-  .hero-play:hover, .hero-play:focus-visible { color: var(--accent-ink); gap: 12px; }
-
-  .hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 56px; align-items: center; }
-  .hero-text { min-width: 0; }
-
-  /* Photo placeholder — same sticker treatment as the buttons */
-  .hero-photo {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 5 / 4;
-    background: #eef4fe;
-    border: 2.5px solid var(--ink);
-    border-radius: 22px;
-    box-shadow: var(--shadow);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    color: var(--ink-soft);
-    text-align: center;
-    padding: 24px;
-    overflow: hidden;
-  }
-  .hero-photo .ph-label { font-weight: 700; font-size: 1rem; color: var(--ink); }
-  .hero-photo .ph-hint { font-size: 0.85rem; color: var(--body); max-width: 22ch; }
-  /* When you drop in a real photo, give the <img> this class */
-  .hero-photo-img {
-    width: 100%; aspect-ratio: 5 / 4; object-fit: cover;
-    border: 2.5px solid var(--ink); border-radius: 22px; box-shadow: var(--shadow);
-    display: block;
-  }
-
-  /* ---------- Section rhythm ---------- */
-  section { padding: 88px 0; }
-  .section-head { max-width: 620px; }
-  .section-head.center { margin: 0 auto; text-align: center; }
-  .section-head h2 { font-size: clamp(2.1rem, 5.5vw, 3.2rem); }
-  .section-head p { font-size: 1.15rem; margin: 22px 0 0; }
-
-  .divider { border: 0; border-top: 1px solid var(--line); margin: 0; }
-
-  /* ---------- Walk options (cards) ---------- */
-  .cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; margin-top: 56px; }
-  .card {
-    flex: 1 1 280px;
-    max-width: 380px;
-    border: 1px solid var(--line);
-    border-radius: 22px;
-    padding: 40px 30px 34px;
-    text-align: center;
-    background: var(--white);
-    transition: transform .18s ease, box-shadow .18s ease;
-  }
-  .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-sm); }
-  .card .icon {
-    width: 88px; height: 88px; border-radius: 50%;
-    background: var(--accent);
-    display: flex; align-items: center; justify-content: center;
-    margin: 0 auto 26px;
-    color: var(--white);
-  }
-  .card h3 { font-size: 1.5rem; margin-bottom: 14px; }
-  .card .price { font-weight: 700; color: var(--accent-ink); font-size: 1rem; letter-spacing: 0.04em; }
-  .card p { margin: 8px 0 22px; font-size: 0.98rem; }
-  .card .more { display: inline-block; font-weight: 700; color: var(--ink); border-bottom: 2px solid var(--accent); padding: 12px 4px; }
-
-  /* ---------- How it works ---------- */
-  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 56px; }
-  .step .num {
-    font-family: "Playfair Display", serif;
-    font-weight: 800; font-size: 2.4rem; color: var(--accent);
-    line-height: 1; margin-bottom: 14px;
-  }
-  .step h3 { font-size: 1.25rem; margin-bottom: 10px; }
-  .step p { font-size: 0.98rem; margin: 0; }
-
-  /* ---------- Reviews ---------- */
-  .reviews-band { background: #f7f8fa; }
-  .watermark {
-    background-color: #fffbf8;
-    background-image: url("data:image/png;base64,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");
-    background-repeat: repeat;
-    background-size: 400px auto;
-  }
-  .quotes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 52px; }
-  .quotes.single { grid-template-columns: min(520px, 100%); justify-content: center; }
-  .quote {
-    background: var(--white);
-    border: 1px solid var(--line);
-    border-radius: 20px;
-    padding: 34px 32px;
-  }
-  .stars { color: #f5a623; letter-spacing: 3px; font-size: 1rem; }
-  .quote p { color: var(--ink-soft); font-size: 1.05rem; margin: 16px 0 22px; }
-  .quote .who { font-weight: 700; color: var(--ink); font-size: 0.95rem; }
-  .quote .who span { display: block; font-weight: 500; color: var(--body); font-size: 0.85rem; }
-
-  /* ---------- Area ---------- */
-  .area-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px; max-width: 760px; }
-  .area-list li { list-style: none; }
-  .area-list .tag {
-    display: inline-block;
-    background: var(--pill);
-    border-radius: 999px;
-    padding: 9px 18px;
-    font-weight: 500; color: var(--ink-soft);
-    font-size: 0.92rem;
-  }
-
-  /* ---------- Offer price card ---------- */
-  .offer-card {
-    max-width: 460px;
-    margin: 56px auto 0;
-    background: var(--white);
-    border: 2.5px solid var(--ink);
-    border-radius: 22px;
-    box-shadow: var(--shadow);
-    padding: 38px 34px 36px;
-    text-align: center;
-  }
-  .offer-badge {
-    display: inline-block;
-    background: var(--accent-ink); color: #fff;
-    font-weight: 700; font-size: 0.78rem;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    border-radius: 999px; padding: 8px 16px; margin-bottom: 22px;
-  }
-  .offer-price { font-weight: 800; font-size: 3.2rem; color: var(--ink); line-height: 1; letter-spacing: -0.02em; }
-  .offer-price .unit { font-size: 1.05rem; font-weight: 600; color: var(--body); letter-spacing: 0; }
-  .offer-note { font-size: 0.98rem; color: var(--body); margin: 12px 0 26px; }
-  .offer-includes { list-style: none; text-align: left; display: grid; gap: 14px; margin: 0 0 30px; padding: 0; }
-  .offer-includes li { display: flex; align-items: flex-start; gap: 12px; font-size: 1rem; color: var(--ink-soft); }
-  .offer-includes .tick {
-    flex: 0 0 auto; width: 24px; height: 24px; border-radius: 50%;
-    background: var(--accent); color: #fff;
-    display: flex; align-items: center; justify-content: center; margin-top: 1px;
-  }
-  .offer-card .btn { width: 100%; }
-
-  /* ---------- Final CTA ---------- */
-  .final { text-align: center; }
-  .final h2 { font-size: clamp(2.2rem, 6vw, 3.4rem); max-width: 16ch; margin: 0 auto; }
-  .final p { margin: 22px auto 40px; font-size: 1.2rem; max-width: 38ch; }
-
-  /* ---------- Footer ---------- */
-  footer { background: var(--ink); color: #aeb6c6; padding: 64px 0 40px; }
-  footer .logo .mark { color: var(--white); }
-  footer .logo .sub { color: #8b95ab; }
-  footer .foot-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 32px; }
-  footer .foot-links { display: flex; gap: 40px; flex-wrap: wrap; }
-  footer .foot-col h4 { color: var(--white); font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; margin: 0 0 16px; }
-  footer .foot-col a { display: block; color: #b6bed0; font-size: 0.95rem; padding: 7px 0; }
-  footer .foot-col a:hover { color: var(--white); }
-  footer .copy { border-top: 1px solid rgba(255,255,255,0.12); margin-top: 40px; padding-top: 26px; font-size: 0.85rem; color: #9aa6bb; }
-
-  /* ---------- Reveal animation ---------- */
-  .reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
-  .reveal.in { opacity: 1; transform: none; }
-
-  @media (prefers-reduced-motion: reduce) {
-    .reveal { opacity: 1; transform: none; transition: none; }
-    html { scroll-behavior: auto; }
-    .btn, .card { transition: none; }
-  }
-
-  /* ---------- Responsive ---------- */
-  @media (max-width: 860px) {
-    .cards, .steps, .quotes { grid-template-columns: 1fr; }
-    .menu-pill { display: inline-flex; }
-    .hero { padding: 64px 0 56px; }
-    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-    .hero h1 { max-width: none; }
-    section { padding: 64px 0; }
-
-    /* Mobile nav becomes a dropdown toggled by the Menu button */
-    .nav-links {
-      position: absolute; top: calc(100% + 8px); right: 24px;
-      flex-direction: column; gap: 4px;
-      background: #fff; border: 1px solid var(--line); border-radius: 14px;
-      box-shadow: 0 18px 40px rgba(20,33,58,.16);
-      padding: 8px; min-width: 210px; display: none; z-index: 60;
-    }
-    .nav-links.open { display: flex; }
-    .nav-links a { padding: 13px 14px; border-radius: 10px; font-size: 1rem; }
-    .nav-links a:hover, .nav-links a:focus-visible { background: var(--pill); color: var(--ink); }
-  }
-
-  /* Narrow phones: tighten the header so the logo, phone and Menu all fit */
-  @media (max-width: 480px) {
-    .nav-right { gap: 8px; }
-    .menu-pill { padding: 14px 16px; }
-    .logo .mark { font-size: clamp(1.5rem, 6.2vw, 1.85rem); }
-    .logo .sub { letter-spacing: 0.16em; }
-  }
-
-  /* ============ Accessibility widget ============ */
-  .a11y-widget { font-family: "Poppins", system-ui, sans-serif; }
-
-  .a11y-fab {
-    position: fixed; right: 24px; bottom: max(24px, env(safe-area-inset-bottom, 24px)); z-index: 100;
-    width: 58px; height: 58px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    background: var(--accent); color: #fff;
-    border: 2.5px solid var(--ink);
-    box-shadow: 4px 4px 0 var(--ink);
-    cursor: pointer;
-    transition: transform .14s ease, box-shadow .14s ease;
-  }
-  .a11y-fab:hover, .a11y-fab:focus-visible { transform: translate(2px,2px); box-shadow: 2px 2px 0 var(--ink); }
-  .a11y-fab:active { transform: translate(4px,4px); box-shadow: 0 0 0 var(--ink); }
-
-  .a11y-panel {
-    position: fixed; right: 24px; bottom: calc(92px + env(safe-area-inset-bottom, 0px)); z-index: 110;
-    width: min(360px, calc(100vw - 32px));
-    max-height: min(80vh, 660px); overflow-y: auto;
-    background: #fff; border: 1px solid var(--line);
-    border-radius: 18px; box-shadow: 0 24px 60px rgba(20,33,58,.28);
-    opacity: 0; transform: translateY(12px) scale(.98); pointer-events: none;
-    transition: opacity .18s ease, transform .18s ease;
-  }
-  .a11y-panel.open { opacity: 1; transform: none; pointer-events: auto; }
-
-  .a11y-head {
-    display: flex; align-items: center; gap: 10px;
-    background: var(--accent-ink); color: #fff;
-    padding: 16px 18px; border-radius: 18px 18px 0 0;
-    position: sticky; top: 0; z-index: 1;
-  }
-  .a11y-head .title { font-weight: 700; font-size: 17px; flex: 1; }
-  .a11y-head button {
-    width: 40px; height: 40px; border-radius: 50%;
-    border: none; background: rgba(255,255,255,.18); color: #fff;
-    display: flex; align-items: center; justify-content: center; cursor: pointer;
-    flex: 0 0 auto;
-  }
-  .a11y-head button:hover { background: rgba(255,255,255,.34); }
-
-  .a11y-body { padding: 18px; }
-
-  .a11y-lang {
-    display: flex; align-items: center; gap: 12px; width: 100%;
-    background: #fff; border: 1px solid var(--line); border-radius: 12px;
-    padding: 12px 14px; margin: 0 0 6px; cursor: pointer; font-size: 15px;
-    color: var(--ink); font-family: inherit;
-  }
-  .a11y-lang:hover { border-color: #c8ccd4; }
-  .a11y-lang .flag {
-    width: 34px; height: 34px; border-radius: 50%; background: var(--pill);
-    display: flex; align-items: center; justify-content: center;
-    font-weight: 700; font-size: 13px; color: var(--ink-soft); flex: 0 0 auto;
-  }
-  .a11y-lang .lname { flex: 1; font-weight: 600; text-align: left; }
-  .a11y-lang-note { font-size: 12.5px; color: var(--body); margin: 2px 2px 0; }
-
-  .a11y-section-label { font-weight: 700; color: var(--ink); font-size: 16px; margin: 18px 0 14px; }
-
-  .a11y-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-
-  .a11y-tile {
-    grid-column: span 1;
-    border: 1.5px solid var(--line); border-radius: 12px;
-    background: #fbfbfc; padding: 14px 6px;
-    display: flex; flex-direction: column; align-items: center; gap: 8px;
-    cursor: pointer; text-align: center; color: var(--ink);
-    font-size: 12.5px; font-weight: 600; line-height: 1.2;
-    font-family: inherit;
-    transition: border-color .12s ease, background .12s ease, color .12s ease;
-  }
-  .a11y-tile .ic { height: 26px; display: flex; align-items: center; justify-content: center; color: var(--ink-soft); }
-  .a11y-tile .ic .gly { font-weight: 800; font-size: 19px; letter-spacing: -.02em; line-height: 1; }
-  .a11y-tile:hover { border-color: #c8ccd4; }
-  .a11y-tile[aria-pressed="true"] {
-    border-color: var(--accent); background: #eef4fe; color: var(--accent-ink);
-  }
-  .a11y-tile[aria-pressed="true"] .ic { color: var(--accent); }
-
-  .a11y-tile.wide { grid-column: span 2; gap: 10px; padding: 14px 12px; }
-  .a11y-tile.wide .wide-label { font-weight: 600; font-size: 13px; color: var(--ink); }
-  .a11y-stepper { display: flex; align-items: center; gap: 8px; width: 100%; justify-content: center; }
-  .a11y-step {
-    width: 40px; height: 40px; border-radius: 50%; border: none;
-    background: var(--accent-ink); color: #fff; font-size: 20px; line-height: 1;
-    display: flex; align-items: center; justify-content: center; cursor: pointer; flex: 0 0 auto;
-  }
-  .a11y-step:hover { background: #21498f; }
-  .a11y-pct {
-    flex: 1; max-width: 120px; text-align: center; font-weight: 600; color: var(--accent-ink);
-    background: var(--pill); border-radius: 999px; padding: 9px 0; font-size: 14px;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .a11y-panel, .a11y-fab { transition: none; }
-  }
-
-  /* ----- Effects applied only to page content (#page), never the widget ----- */
-  #page.a11y-highlight-titles :is(h1,h2,h3) {
-    background: #fff3bf !important; color: #14213a !important;
-    box-shadow: 0 0 0 2px #f6a609; border-radius: 4px;
-  }
-  #page.a11y-highlight-links a {
-    background: #fff3bf !important; color: #14213a !important;
-    text-decoration: underline !important; text-underline-offset: 3px;
-    box-shadow: 0 0 0 2px #f6a609; border-radius: 3px;
-  }
-  #page.a11y-dyslexic,
-  #page.a11y-dyslexic :is(h1,h2,h3,p,a,span,li,div,button) {
-    font-family: 'OpenDyslexic', 'Comic Sans MS', Verdana, sans-serif !important;
-  }
-  #page.a11y-letter-spacing :is(h1,h2,h3,p,a,span,li,.lead,.eyebrow,.price) {
-    letter-spacing: .1em !important;
-  }
-  #page.a11y-line-height :is(h1,h2,h3,p,li,.lead,.eyebrow) {
-    line-height: 2 !important;
-  }
-  #page.a11y-font-weight :is(p,li,a,span,.lead,.price,.who) {
-    font-weight: 700 !important;
-  }
-  #page.a11y-align-left, #page.a11y-align-left * { text-align: left !important; }
-
-  /* Colour adjustments — two axes (contrast + saturation) composed via vars */
-  #page.a11y-color { filter: var(--a11y-c, contrast(1)) var(--a11y-s, saturate(1)); }
-
-  /* Stop animations */
-  #page.a11y-stop-anim *,
-  #page.a11y-stop-anim *::before,
-  #page.a11y-stop-anim *::after {
-    animation-duration: .001s !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: .001s !important;
-    scroll-behavior: auto !important;
-  }
-  #page.a11y-stop-anim .reveal { opacity: 1 !important; transform: none !important; }
-
-  /* Big cursor (set on <html> so it covers the whole document) */
-  html.a11y-big-cursor, html.a11y-big-cursor * {
-    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 24 24'%3E%3Cpath d='M5 2 L5 18 L9 14 L11.6 19.5 L13.6 18.6 L11 13.2 L16 13.2 Z' fill='%23111' stroke='%23fff' stroke-width='1.3' stroke-linejoin='round'/%3E%3C/svg%3E") 5 2, auto !important;
-  }
-
-  /* Reading guide bar */
-  .a11y-guide {
-    position: fixed; left: 0; right: 0; height: 40px; z-index: 99;
-    background: rgba(62,123,232,.13);
-    border-top: 2px solid var(--accent); border-bottom: 2px solid var(--accent);
-    pointer-events: none; transform: translateY(-50%);
-  }
-
-  /* Full-width reset button */
-  .a11y-reset-all {
-    width: 100%; margin-top: 20px;
-    background: var(--accent-ink); color: #fff; border: none;
-    border-radius: 12px; padding: 14px; font-weight: 700; font-size: 15px;
-    cursor: pointer; font-family: inherit;
-  }
-  .a11y-reset-all:hover { background: #21498f; }
-</style>
+<!-- non-blocking webfonts -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" /></noscript>
+<!-- preload LCP hero image (responsive) -->
+<link rel="preload" as="image" href="assets/hero-960.webp" imagesrcset="assets/hero-960.webp 960w, assets/hero-1600.webp 1600w" imagesizes="100vw" fetchpriority="high" />
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Web design for dog walkers",
-  "name": "Out You Go: web design for dog walkers",
-  "description": "Fast, accessible websites for dog walkers across the UK, built by a working dog walker in Woodstock, Oxfordshire.",
-  "url": "https://outyougo.co.uk/dog-walker-web-design",
-  "areaServed": { "@type": "Country", "name": "United Kingdom" },
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Out You Go",
-    "telephone": "+44 7700 900000",
-    "email": "hello@outyougo.co.uk",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Woodstock",
-      "addressRegion": "Oxfordshire",
-      "postalCode": "OX20",
-      "addressCountry": "GB"
-    }
-  },
-  "offers": [
-    { "@type": "Offer", "name": "Custom website", "priceCurrency": "GBP", "price": "99" }
-  ]
-}
+{"@context": "https://schema.org", "@graph": [{"@type": "LocalBusiness", "@id": "https://cavacrew.co.uk/#business", "name": "Cava Crew", "alternateName": "Cava Crew Dog Walking", "description": "Friendly, insured dog walking in Musselburgh, Wallyford, Prestonpans and the surrounding East Lothian area — group walks, drop-in visits and occasional adventure days. DBS-checked, ITC canine first-aid trained and owner-led by Kayleigh.", "url": "https://cavacrew.co.uk/", "image": "https://cavacrew.co.uk/assets/hero-1600.webp", "logo": "https://cavacrew.co.uk/assets/logo-280.webp", "telephone": "+447505907165", "email": "cavacrew@outlook.com", "knowsLanguage": "en-GB", "founder": {"@type": "Person", "name": "Kayleigh"}, "areaServed": [{"@type": "AdministrativeArea", "name": "East Lothian"}, {"@type": "City", "name": "Musselburgh"}, {"@type": "City", "name": "Wallyford"}, {"@type": "City", "name": "Prestonpans"}], "geo": {"@type": "GeoCoordinates", "latitude": 55.945, "longitude": -3.01}, "sameAs": ["https://www.instagram.com/thecavacrew_/"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Dog walking services", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Group dog walks", "areaServed": "East Lothian", "description": "Sociable small-group walks for well-matched dogs."}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Adventure days out", "areaServed": "East Lothian", "description": "Occasional off-lead adventure days in a safely enclosed field and woodland, with a snack pack for every dog. Limited spaces."}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Drop-in visits", "areaServed": "East Lothian", "description": "Home visits for feeding, fresh water, a garden break and company."}}]}, "contactPoint": {"@type": "ContactPoint", "telephone": "+447505907165", "email": "cavacrew@outlook.com", "contactType": "customer service", "areaServed": "GB", "availableLanguage": "English"}}, {"@type": "FAQPage", "@id": "https://cavacrew.co.uk/#faq", "mainEntity": [{"@type": "Question", "name": "Which areas of East Lothian do you cover?", "acceptedAnswer": {"@type": "Answer", "text": "Cava Crew covers Musselburgh, Wallyford, Prestonpans and the surrounding areas. Get in touch to check we cover your area."}}, {"@type": "Question", "name": "Are you insured and DBS-checked?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Cava Crew is fully insured, DBS-checked and trained in ITC canine first aid, and every walk is owner-led by Kayleigh."}}, {"@type": "Question", "name": "What dog walking services do you offer?", "acceptedAnswer": {"@type": "Answer", "text": "Regular small-group walks and drop-in home visits, plus occasional adventure days out — chosen to suit your dog and your routine."}}, {"@type": "Question", "name": "How do I book a dog walker with Cava Crew?", "acceptedAnswer": {"@type": "Answer", "text": "Send a quick enquiry through the contact form or call 07505 907165, and Kayleigh will come back to you, usually the same day."}}]}]}
 </script>
-</head>
-<body>
 
+<style>
+  :root{
+    --paper:#F7EFE3;
+    --paper-2:#FCF7EF;
+    --clay:#CBA987;
+    --clay-soft:#EBDCC4;
+    --caramel:#CC9A5E;
+    --terracotta:#BC5F2D;
+    --terracotta-deep:#9E4E24;
+    --btn:#A8521F;
+    --btn-hover:#8F451F;
+    --tag:#A8521F;
+    --espresso:#4B3527;
+    --ink:#3D2C21;
+    --olive:#75673A;
+    --line:rgba(75,53,39,.16);
+    --shadow:0 10px 30px -22px rgba(75,53,39,.24);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;scroll-padding-top:80px;font-size:110%;}
+  .skip-link{position:absolute;left:-9999px;top:0;z-index:100;background:var(--espresso);color:#fff;padding:.7rem 1.1rem;border-radius:0 0 10px 0;font-weight:700;text-decoration:none;}
+  .skip-link:focus{left:0;}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Nunito Sans",system-ui,sans-serif;
+    font-size:clamp(1rem,.5vw + .92rem,1.1rem);line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;max-width:100%;}
+  a{color:inherit;}
+  .wrap{width:min(1080px,92vw);margin-inline:auto;}
+  .narrow{max-width:64ch;margin-inline:auto;}
+
+  /* ---- top bar + pill nav ---- */
+  .topbar{position:sticky;top:0;z-index:60;background:rgba(247,239,227,.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .topbar-inner{display:flex;justify-content:center;align-items:center;gap:.45rem;padding:.5rem 1rem;}
+  .pillnav{display:flex;flex-wrap:wrap;justify-content:center;gap:.1rem;}
+  .pillnav a{padding:.42rem .95rem;border-radius:999px;font-weight:700;font-size:.84rem;letter-spacing:.02em;color:var(--espresso);text-decoration:none;transition:background .15s,color .15s;}
+  .pillnav a:hover{color:var(--terracotta);}
+  .pill-cta{background:var(--btn);color:#FBF4EA;border-radius:999px;padding:.5rem 1.1rem;font-weight:700;font-size:.84rem;letter-spacing:.02em;text-decoration:none;white-space:nowrap;transition:background .15s;}
+  .pill-cta:hover{background:var(--btn-hover);}
+  @media(max-width:560px){ .topbar-inner{flex-wrap:wrap;} .pillnav a{padding:.4rem .6rem;font-size:.76rem;} .pillnav a[href="#top"]{display:none;} .pill-cta{font-size:.78rem;padding:.45rem .85rem;} }
+
+  /* ---- logo lockup ---- */
+  .lockup{text-align:center;padding:clamp(1.3rem,3vw,2.2rem) 0 clamp(.9rem,2.5vw,1.5rem);}
+  .lockup img{width:clamp(104px,14vw,138px);height:auto;border-radius:50%;margin:0 auto .6rem;box-shadow:var(--shadow);border:3px solid var(--paper-2);}
+  .logo-link{display:inline-block;line-height:0;border-radius:50%;transition:transform .2s ease;}
+  .logo-link:hover{transform:scale(1.03);}
+  .logo-link:focus-visible{outline:3px solid var(--terracotta);outline-offset:4px;}
+  .lockup .loc{font-family:"Nunito Sans",sans-serif;font-weight:700;letter-spacing:.28em;font-size:.7rem;color:var(--tag);text-transform:uppercase;padding-left:.28em;}
+
+  /* ---- full-bleed photo bands ---- */
+  .band{width:100%;height:clamp(300px,40vw,440px);overflow:hidden;}
+  .band img{width:100%;height:100%;object-fit:cover;display:block;}
+  /* hero with overlaid value prop + CTA */
+  .hero{position:relative;width:100%;height:clamp(400px,52vw,540px);overflow:hidden;}
+  .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,26,16,.18) 0%,rgba(40,26,16,.12) 45%,rgba(40,26,16,.62) 100%);}
+  .hero-inner{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;padding:clamp(1.6rem,4vw,3rem) 1.2rem clamp(1.8rem,4vw,2.8rem);}
+  .hero-h1{font-family:"Nunito Sans",system-ui,sans-serif;font-weight:800;color:#fff;
+    font-size:clamp(2rem,5.2vw,3.5rem);line-height:1.08;margin:0 0 .5rem;max-width:18ch;
+    text-shadow:0 2px 18px rgba(30,18,10,.5);}
+  .hero-sub{color:#fdf3e8;font-weight:600;font-size:clamp(1rem,1.9vw,1.25rem);margin:0 0 1.3rem;text-shadow:0 1px 10px rgba(30,18,10,.55);}
+  .hero-eyebrow{color:#fbeede;font-weight:700;font-size:clamp(.78rem,1.5vw,.95rem);letter-spacing:.14em;text-transform:uppercase;margin:0 0 .7rem;text-shadow:0 1px 8px rgba(30,18,10,.5);}
+  .faq{max-width:720px;margin:1.6rem auto 0;text-align:left;}
+  .faq details{border-top:1px solid var(--line);}
+  .faq details:last-child{border-bottom:1px solid var(--line);}
+  .faq summary{list-style:none;cursor:pointer;padding:1.05rem .2rem;font-weight:700;font-size:1.02rem;color:var(--espresso);display:flex;justify-content:space-between;align-items:center;gap:1rem;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{content:"+";font-weight:700;font-size:1.3rem;color:var(--btn);line-height:1;}
+  .faq details[open] summary::after{content:"\2212";}
+  .faq summary:hover{color:var(--btn);}
+  .faq summary:focus-visible{outline:3px solid var(--btn);outline-offset:3px;border-radius:6px;}
+  .faq-a{padding:0 .2rem 1.1rem;color:var(--ink);}
+  .faq-a p{margin:0;line-height:1.6;}
+
+  @media(max-width:560px){ .hero{height:clamp(380px,86vw,460px);} }
+
+  /* ---- editorial sections ---- */
+  .section{padding:clamp(3rem,7vw,5.4rem) 0;text-align:center;}
+  .section.tint{background:transparent;}
+  .sec-head{font-family:"Nunito Sans",system-ui,sans-serif;font-weight:700;
+    letter-spacing:-.01em;color:var(--espresso);
+    font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.12;margin:0 0 .5rem;}
+  .sec-sub{font-family:"Nunito Sans",sans-serif;font-weight:400;color:var(--olive);
+    font-size:clamp(1rem,1.6vw,1.15rem);line-height:1.45;margin:0 auto 1.6rem;max-width:40ch;}
+  .section p{margin:0 auto 1.15em;color:var(--ink);}
+  .section p:last-of-type{margin-bottom:0;}
+
+  /* credentials line */
+  .creds{font-family:"Nunito Sans",sans-serif;font-weight:600;color:var(--espresso);
+    letter-spacing:.01em;font-size:.9rem;margin:1.6rem auto .2rem;display:flex;
+    flex-wrap:wrap;justify-content:center;gap:.35rem .95rem;max-width:46ch;}
+  .creds span{display:inline-flex;align-items:center;gap:.95rem;}
+  .creds span::after{content:"";width:4px;height:4px;border-radius:50%;background:var(--clay);}
+  .creds span:last-child::after{display:none;}
+
+  /* ---- button ---- */
+  .btn{display:inline-flex;align-items:center;gap:.5em;background:var(--btn);color:#FBF4EA;
+    font-family:"Nunito Sans",sans-serif;font-weight:700;font-size:.95rem;letter-spacing:.02em;
+    padding:.78em 1.7em;border-radius:999px;border:1.6px solid var(--btn);text-decoration:none;cursor:pointer;
+    transition:background .18s;}
+  .btn:hover{background:var(--btn-hover);border-color:var(--btn-hover);}
+  .btn--ghost{background:transparent;color:var(--espresso);border-color:var(--clay);box-shadow:none;}
+  .btn--ghost:hover{background:rgba(203,169,135,.2);border-color:var(--caramel);color:var(--espresso);}
+  .cta{margin-top:1.7rem;display:flex;justify-content:center;gap:.8rem;flex-wrap:wrap;}
+
+  .paw{width:1em;height:1em;display:inline-block;fill:currentColor;vertical-align:-.12em;}
+
+  /* ---- reviews ---- */
+  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem 2.6rem;margin-top:2.4rem;text-align:left;}
+  .quote{padding:1.4rem 0 0;border-top:1px solid var(--line);}
+  .quote .stars{color:var(--caramel);letter-spacing:.15em;font-size:.95rem;margin-bottom:.55rem;}
+  .quote p{font-family:"Nunito Sans",system-ui,sans-serif;font-style:normal;font-size:1.02rem;line-height:1.55;color:var(--espresso);margin:0 0 .9rem;}
+  .quote .who{font-weight:700;font-size:.88rem;color:var(--olive);}
+  @media(max-width:760px){ .quotes{grid-template-columns:1fr;} }
+
+  /* ---- about ---- */
+  .about-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(1.8rem,4vw,3.4rem);align-items:center;text-align:left;margin-top:1.4rem;}
+  .about-grid img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;box-shadow:var(--shadow);}
+  .about-grid p{margin-inline:0;}
+  @media(max-width:760px){ .about-grid{grid-template-columns:1fr;text-align:center;} .about-grid .ph{max-width:320px;margin-inline:auto;} .about-grid p{margin-inline:auto;} }
+
+  /* ---- contact ---- */
+  form{max-width:560px;margin:2rem auto 0;text-align:left;background:var(--paper-2);border:1px solid var(--line);border-radius:16px;padding:clamp(1.4rem,3vw,2.2rem);}
+  .field{margin-bottom:1rem;}
+  .field.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:0;}
+  label{display:block;font-weight:700;font-size:.84rem;margin-bottom:.32rem;color:var(--espresso);}
+  input,select,textarea{width:100%;font-family:inherit;font-size:1rem;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:.72rem .85rem;transition:border-color .15s,box-shadow .15s;}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--terracotta);box-shadow:0 0 0 3px rgba(188,95,45,.16);}
+  textarea{resize:vertical;min-height:92px;}
+  form .btn{width:100%;justify-content:center;margin-top:.3rem;}
+  .form-note{font-size:.8rem;color:var(--olive);margin:.85rem 0 0;text-align:center;}
+  @media(max-width:600px){ .field.row{grid-template-columns:1fr;gap:0;} .field.row .field{margin-bottom:1rem;} }
+
+  .contacts{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem 2rem;margin-top:2rem;font-weight:700;}
+  .contacts a{display:inline-flex;align-items:center;gap:.55em;color:var(--espresso);text-decoration:none;}
+  .contacts a:hover{color:var(--terracotta);}
+  .contacts svg{width:1.15em;height:1.15em;stroke:var(--terracotta);fill:none;stroke-width:1.8;}
+  .area-tag{font-family:"Nunito Sans",sans-serif;font-weight:700;letter-spacing:.24em;font-size:.72rem;color:var(--tag);text-transform:uppercase;margin-top:1.8rem;}
+  /* form success / error feedback */
+  .form-msg{max-width:560px;margin:1rem auto 0;border-radius:16px;padding:1.1rem 1.3rem;font-weight:600;text-align:center;}
+  .form-msg.success{background:#E7EFD8;color:#3C4A24;border:1px solid #C4D3A6;}
+  .form-msg.error{background:#F6E2D6;color:#7A3A1E;border:1px solid #E2B79E;}
+  .form-msg a{color:inherit;font-weight:800;}
+
+  /* ---- footer ---- */
+  footer.site{background:var(--espresso);color:#e9ddcd;text-align:center;padding:clamp(2.4rem,5vw,3.4rem) 0 1.8rem;}
+  footer.site img{width:62px;height:62px;border-radius:50%;margin:0 auto .7rem;border:2px solid rgba(255,255,255,.2);}
+  footer .fname{font-family:"Nunito Sans",system-ui,sans-serif;font-weight:800;letter-spacing:.06em;font-size:1.08rem;color:#fdf6ec;}
+  footer .fsub{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--caramel);font-weight:700;margin-top:.25rem;}
+  footer .fcontact{margin-top:1.1rem;font-size:.92rem;display:flex;flex-wrap:wrap;justify-content:center;gap:.3rem 1.4rem;}
+  footer .fcontact a{color:#e9ddcd;text-decoration:none;font-weight:600;}
+  footer .fcontact a:hover{color:#fff;}
+  footer .copy{margin-top:1.6rem;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.13);font-size:.78rem;color:#c9b9a4;}
+
+  .reveal{will-change:opacity,transform;}
+  .js .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
+  .js .reveal.in{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){ .reveal,.js .reveal{opacity:1!important;transform:none!important;transition:none;} html{scroll-behavior:auto;} }
+  :focus-visible{outline:3px solid var(--terracotta);outline-offset:3px;border-radius:6px;}
+
+  /* mobile tap targets >=44px */
+  @media(max-width:760px){
+    .pillnav a{min-height:44px;display:inline-flex;align-items:center;}
+    .pill-cta{min-height:44px;display:inline-flex;align-items:center;}
+    .contacts a{min-height:44px;}
+    .contacts{gap:.3rem 1.4rem;}
+    footer .fcontact a{min-height:40px;display:inline-flex;align-items:center;}
+  }
+</style>
+
+<!-- ===== Accessibility widget styles (self-contained) ===== -->
+<style id="a11y-css">
+  :root{
+    --a11y-accent: var(--btn, #A8521F);
+    --a11y-accent-press: var(--btn-hover, #8F451F);
+    --a11y-ink: var(--ink, #3D2C21);
+    --a11y-line: var(--line, rgba(60,40,25,.18));
+    --a11y-surface:#fff;
+    --a11y-tile: var(--paper-2, #FCF7EF);
+    --a11y-label: var(--olive, #75673A);
+    --a11y-tint: rgba(168,82,31,.12);
+  }
+  /* --- effects are scoped to #page so they never touch the widget --- */
+  #page{ filter: var(--a11y-c, contrast(1)) var(--a11y-s, saturate(1)); }
+  #page.a11y-hl-title :is(h1,h2,h3){ background:rgba(204,154,94,.40)!important; box-shadow:0 0 0 2px rgba(168,82,31,.55)!important; border-radius:3px; }
+  #page.a11y-hl-links a{ background:rgba(204,154,94,.32)!important; box-shadow:0 0 0 1.5px rgba(168,82,31,.5)!important; text-decoration:underline!important; }
+  #page.a11y-dyslexia, #page.a11y-dyslexia *{ font-family:'OpenDyslexic','Comic Sans MS',cursive!important; }
+  #page.a11y-spacing, #page.a11y-spacing *{ letter-spacing:.06em!important; }
+  #page.a11y-lineheight, #page.a11y-lineheight *{ line-height:1.9!important; }
+  #page.a11y-bold, #page.a11y-bold *{ font-weight:700!important; }
+  #page.a11y-alignleft, #page.a11y-alignleft *{ text-align:left!important; }
+  #page.a11y-nomotion *, #page.a11y-nomotion *::before, #page.a11y-nomotion *::after{
+    animation-duration:.001s!important; animation-delay:0s!important;
+    transition-duration:.001s!important; transition-delay:0s!important; scroll-behavior:auto!important; }
+  #page.a11y-nomotion .reveal{ opacity:1!important; transform:none!important; }
+  html.a11y-bigcursor, html.a11y-bigcursor *{ cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='38' height='38' viewBox='0 0 38 38'%3E%3Cpath d='M7 4 L7 31 L14 24 L19 35 L24 33 L19 22 L29 22 Z' fill='black' stroke='white' stroke-width='2.2' stroke-linejoin='round'/%3E%3C/svg%3E") 7 4, auto !important; }
+
+  /* --- FAB --- */
+  .a11y-fab{ position:fixed; z-index:2147483600; right:max(18px,env(safe-area-inset-right,0px));
+    bottom:calc(env(safe-area-inset-bottom,0px) + 18px); width:58px; height:58px; border-radius:50%;
+    border:none; background:var(--a11y-accent); color:#fff; display:flex; align-items:center; justify-content:center;
+    cursor:pointer; box-shadow:0 8px 22px rgba(40,26,16,.30); transition:transform .15s ease, background .15s ease; font:inherit; }
+  .a11y-fab svg{ width:32px; height:32px; }
+  .a11y-fab:hover{ background:var(--a11y-accent-press); transform:translateY(-2px); }
+  .a11y-fab:focus-visible{ outline:3px solid var(--a11y-accent-press); outline-offset:3px; }
+
+  /* --- Panel --- */
+  .a11y-panel{ position:fixed; z-index:2147483600; right:max(18px,env(safe-area-inset-right,0px));
+    bottom:calc(env(safe-area-inset-bottom,0px) + 88px); width:min(360px, calc(100vw - 32px));
+    max-height:min(80vh, 660px); overflow:auto; background:var(--a11y-surface); color:var(--a11y-ink);
+    border:1px solid var(--a11y-line); border-radius:18px; box-shadow:0 24px 60px -16px rgba(40,26,16,.42);
+    font-family:"Nunito Sans", system-ui, -apple-system, sans-serif; font-size:15px; line-height:1.4;
+    opacity:0; visibility:hidden; transform:translateY(10px);
+    transition:opacity .18s ease, transform .18s ease; }
+  .a11y-panel.is-open{ opacity:1; visibility:visible; transform:none; }
+  .a11y-panel *{ box-sizing:border-box; }
+  .a11y-head{ position:sticky; top:0; z-index:2; display:flex; align-items:center; gap:8px;
+    padding:13px 14px; background:var(--a11y-surface); border-bottom:1px solid var(--a11y-line); }
+  .a11y-head h2{ margin:0 auto 0 2px; font-size:16px; font-weight:800; color:var(--a11y-ink); font-family:inherit; }
+  .a11y-iconbtn{ width:40px; height:40px; border-radius:10px; border:1px solid var(--a11y-line);
+    background:var(--a11y-tile); color:var(--a11y-ink); display:flex; align-items:center; justify-content:center; cursor:pointer; }
+  .a11y-iconbtn svg{ width:18px; height:18px; }
+  .a11y-iconbtn:hover{ border-color:var(--a11y-accent); color:var(--a11y-accent); }
+  .a11y-iconbtn:focus-visible{ outline:3px solid var(--a11y-accent-press); outline-offset:2px; }
+
+  .a11y-body{ padding:12px 14px 16px; }
+  .a11y-section{ margin-top:15px; }
+  .a11y-section:first-child{ margin-top:2px; }
+  .a11y-seclabel{ font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--a11y-label); margin:0 0 8px 2px; }
+  .a11y-grid{ display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  .a11y-wide{ grid-column:1 / -1; }
+
+  .a11y-tile{ display:flex; flex-direction:column; align-items:flex-start; gap:8px; min-height:62px;
+    padding:10px 11px; border:1.5px solid var(--a11y-line); border-radius:12px; background:var(--a11y-tile);
+    color:var(--a11y-ink); font:inherit; text-align:left; cursor:pointer; transition:border-color .12s, background .12s; }
+  .a11y-tile .ic{ display:flex; }
+  .a11y-tile .ic svg{ width:22px; height:22px; color:var(--a11y-accent); }
+  .a11y-tile .lbl{ font-size:12.5px; font-weight:700; line-height:1.15; }
+  .a11y-tile:hover{ border-color:var(--a11y-accent); }
+  .a11y-tile[aria-pressed="true"]{ border-color:var(--a11y-accent); background:var(--a11y-tint); }
+  .a11y-tile:focus-visible{ outline:3px solid var(--a11y-accent-press); outline-offset:2px; }
+
+  .a11y-step{ display:flex; align-items:center; gap:10px; min-height:62px; padding:8px 11px;
+    border:1.5px solid var(--a11y-line); border-radius:12px; background:var(--a11y-tile); }
+  .a11y-step .lbl{ font-size:12.5px; font-weight:700; margin-right:auto; display:flex; align-items:center; gap:8px; }
+  .a11y-step .lbl svg{ width:22px; height:22px; color:var(--a11y-accent); }
+  .a11y-step .ctrls{ display:flex; align-items:center; gap:6px; }
+  .a11y-stepbtn{ width:44px; height:44px; border-radius:10px; border:1.5px solid var(--a11y-line);
+    background:var(--a11y-surface); color:var(--a11y-ink); font-size:22px; font-weight:700; line-height:1;
+    cursor:pointer; display:flex; align-items:center; justify-content:center; }
+  .a11y-stepbtn:hover{ border-color:var(--a11y-accent); color:var(--a11y-accent); }
+  .a11y-stepbtn:focus-visible{ outline:3px solid var(--a11y-accent-press); outline-offset:2px; }
+  .a11y-pct{ min-width:50px; text-align:center; font-weight:800; font-size:14px; }
+
+  .a11y-lang{ width:100%; display:flex; align-items:center; min-height:48px; padding:10px 12px;
+    border:1.5px solid var(--a11y-line); border-radius:12px; background:var(--a11y-tile);
+    color:var(--a11y-ink); font:inherit; cursor:pointer; }
+  .a11y-lang .lbl{ font-weight:700; font-size:13px; margin-right:auto; }
+  .a11y-lang .cur{ font-size:13px; color:var(--a11y-label); display:flex; align-items:center; gap:4px; }
+  .a11y-lang .cur svg{ width:15px; height:15px; }
+  .a11y-lang:hover{ border-color:var(--a11y-accent); }
+  .a11y-lang:focus-visible{ outline:3px solid var(--a11y-accent-press); outline-offset:2px; }
+  .a11y-langnote{ margin:8px 2px 0; font-size:12.5px; color:var(--a11y-label); }
+  .a11y-langnote[hidden]{ display:none; }
+
+  .a11y-resetbtn{ width:100%; margin-top:18px; min-height:48px; border:1.5px solid var(--a11y-accent);
+    border-radius:12px; background:var(--a11y-surface); color:var(--a11y-accent); font:inherit; font-weight:800;
+    font-size:13.5px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px; }
+  .a11y-resetbtn svg{ width:18px; height:18px; }
+  .a11y-resetbtn:hover{ background:var(--a11y-tint); }
+  .a11y-resetbtn:focus-visible{ outline:3px solid var(--a11y-accent-press); outline-offset:2px; }
+
+  .a11y-guide{ position:fixed; left:0; right:0; top:0; height:42px; transform:translateY(-50%);
+    z-index:2147483200; pointer-events:none; display:none; background:rgba(168,82,31,.16);
+    border-top:2px solid rgba(168,82,31,.55); border-bottom:2px solid rgba(168,82,31,.55); }
+  .a11y-guide.is-on{ display:block; }
+
+  @media (prefers-reduced-motion: reduce){ .a11y-panel{ transition:none; } .a11y-fab{ transition:none; } }
+</style>
+</head>
+<body id="top">
 <div id="page">
 
-  <!-- HEADER -->
-  <header>
-    <div class="wrap nav">
-      <a class="logo" href="#top" aria-label="Out You Go home">
-        <span class="mark">Out You Go<span class="dot">.</span></span>
-        <span class="sub">Dog Walking</span>
-      </a>
-      <div class="nav-right">
-        <nav class="nav-links" id="navLinks">
-          <a href="#offer">Pricing</a>
-          <a href="#process">Process</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#features">What's included</a>
-          <a href="index.html">Dog walking</a>
-        </nav>
-        <a class="phone" href="tel:+447700900000" aria-label="Call Out You Go">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        </a>
-        <button class="menu-pill" id="navToggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="paw" viewBox="0 0 24 24"><path d="M5.5 11.5c1.1 0 1.9-1.2 1.9-2.6S6.6 6.3 5.5 6.3 3.6 7.5 3.6 8.9 4.4 11.5 5.5 11.5Zm13 0c1.1 0 1.9-1.2 1.9-2.6s-.8-2.6-1.9-2.6-1.9 1.2-1.9 2.6.8 2.6 1.9 2.6ZM9.2 8.4c1.1 0 2-1.3 2-2.9s-.9-2.9-2-2.9-2 1.3-2 2.9.9 2.9 2 2.9Zm5.6 0c1.1 0 2-1.3 2-2.9s-.9-2.9-2-2.9-2 1.3-2 2.9.9 2.9 2 2.9ZM12 12.2c-2.7 0-5 2.4-5 4.7 0 1.7 1.3 2.6 3 2.6.9 0 1.4-.3 2-.3s1.1.3 2 .3c1.7 0 3-.9 3-2.6 0-2.3-2.3-4.7-5-4.7Z"/></symbol>
+</svg>
+
+<a class="skip-link" href="#content">Skip to content</a>
+
+<!-- TOP BAR -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <nav class="pillnav" aria-label="Primary">
+      <a href="#top">Home</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="pill-cta" href="#contact">Get a price</a>
+  </div>
+</header>
+
+<main id="content">
+<!-- LOGO LOCKUP -->
+<div class="lockup reveal">
+  <a href="#top" class="logo-link" aria-label="Cava Crew — home">
+    <img src="assets/logo-140.webp" srcset="assets/logo-140.webp 140w, assets/logo-280.webp 280w" sizes="138px" width="140" height="140" alt="Cava Crew — dog walking services" fetchpriority="high" decoding="async" />
+  </a>
+  <div class="loc">East Lothian</div>
+</div>
+
+<!-- HERO -->
+<section class="hero reveal" aria-label="Welcome">
+  <img class="hero-img" src="assets/hero-1600.webp" srcset="assets/hero-960.webp 960w, assets/hero-1600.webp 1600w" sizes="100vw" width="1600" height="660" alt="Three dogs on a countryside dog walk in East Lothian" fetchpriority="high" decoding="async" />
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Your dog’s favourite part of the day</p>
+    <h1 class="hero-h1">Friendly dog walking in East Lothian</h1>
+    <p class="hero-sub">Group walks, adventure days out and drop-in visits — insured, DBS-checked and owner-led.</p>
+    <a class="btn" href="#contact">Get a price</a>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="section" id="intro">
+  <div class="wrap reveal">
+    <h2 class="sec-head">Made for busy dog owners</h2>
+    <div class="narrow">
+      <p>Juggling work, family and a dog who needs a proper walk? That's where I come in. Cava Crew gives your dog the exercise, company and fresh air they need — so you can get on with your day knowing they're in safe, experienced hands.</p>
+      <p>Whether it's a small-group walk, a big adventure day or a quick drop-in visit, there's an option to suit your dog and your routine. Get in touch and we'll find the right fit.</p>
+    </div>
+    <div class="creds">
+      <span>DBS checked</span><span>ITC Canine First Aid</span><span>Fully insured</span><span>Owner-led</span>
+    </div>
+  </div>
+</section>
+
+<!-- BAND -->
+<div class="band reveal"><img src="assets/spaniel-1600.webp" srcset="assets/spaniel-800.webp 800w, assets/spaniel-1600.webp 1600w" sizes="100vw" width="1600" height="560" loading="lazy" decoding="async" alt="A black spaniel on a dog walk in East Lothian" style="object-position:center 38%"/></div>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="wrap reveal">
+    <h2 class="sec-head">Group walks</h2>
+    <p class="sec-sub">Small groups, proper adventures, good company</p>
+    <div class="narrow">
+      <p>Your dog joins a small, carefully matched pack for a proper hour out — sniffing, exploring and making friends along the way. Numbers stay deliberately low, so every dog gets attention, and groups are matched by age, size and energy so everyone comes home happy.</p>
+    </div>
+    <div class="cta"><a class="btn" href="#contact" data-service="Group walks">Get a price</a></div>
+  </div>
+</section>
+
+<div class="band reveal"><img src="assets/spitz-1600.webp" srcset="assets/spitz-800.webp 800w, assets/spitz-1600.webp 1600w" sizes="100vw" width="1600" height="560" loading="lazy" decoding="async" alt="A happy spitz dog on a hilltop walk in East Lothian" /></div>
+
+<section class="section">
+  <div class="wrap reveal">
+    <h2 class="sec-head">Adventure days out</h2>
+    <p class="sec-sub">An occasional day out — limited spots</p>
+    <div class="narrow">
+      <p>Every couple of months, Cava Crew runs a one-off adventure day — a few hours in a safely enclosed field and woodland, so even dogs who usually stay on the lead get some proper off-lead time. Spaces are limited, and every dog goes home with their own snack pack.</p>
+      <p>These usually land on a Saturday and tie in with the seasons — a summer outing, the odd holiday — as an optional extra for anyone keen. The next one is pencilled in for July (date to be confirmed).</p>
+    </div>
+    <div class="cta"><a class="btn" href="#contact" data-service="Adventure days out">Register interest</a></div>
+  </div>
+</section>
+
+<div class="band reveal"><img src="assets/minpin-1600.webp" srcset="assets/minpin-800.webp 800w, assets/minpin-1600.webp 1600w" sizes="100vw" width="1600" height="560" loading="lazy" decoding="async" alt="A miniature pinscher on a woodland dog walk in East Lothian" /></div>
+
+<section class="section">
+  <div class="wrap reveal">
+    <h2 class="sec-head">Drop-in visits</h2>
+    <p class="sec-sub">A friendly face while you're out</p>
+    <div class="narrow">
+      <p>Long day at work, or a puppy who can't be left too long? I'll call in for feeding, fresh water, a garden break and a proper fuss — making sure all is well and giving your dog a bit of company until you're home.</p>
+    </div>
+    <div class="cta"><a class="btn" href="#contact" data-service="Drop-in visits">Get a price</a></div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section class="section" id="areas">
+  <div class="wrap reveal">
+    <h2 class="sec-head">Areas we cover</h2>
+    <p class="sec-sub">Friendly, local dog walking in East Lothian</p>
+    <div class="narrow">
+      <p>Cava Crew covers Musselburgh, Wallyford, Prestonpans and the surrounding areas — friendly, local dog walking close to home.</p>
+      <p>Not sure if we reach you? <a href="#contact">Get in touch</a> and we’ll let you know.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section" id="reviews">
+  <div class="wrap reveal">
+    <h2 class="sec-head">What their owners say</h2>
+    <p class="sec-sub">Happy dogs, happy humans</p>
+    <!-- SAMPLE TESTIMONIALS — placeholder copy. Replace with Kayleigh's real reviews. -->
+    <div class="quotes">
+      <figure class="quote">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>"Kayleigh has been walking our cockapoo for months and he absolutely adores her. He comes home beaming, and the photo updates are the highlight of my work day."</p>
+        <figcaption class="who">— Sarah, Musselburgh</figcaption>
+      </figure>
+      <figure class="quote">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>"So reliable and genuinely kind — I never think twice about leaving the dogs with her. The adventure days out are easily their favourite part of the week."</p>
+        <figcaption class="who">— James, Wallyford</figcaption>
+      </figure>
+      <figure class="quote">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>"The drop-in visits have been a total lifesaver around my shifts. Trustworthy, brilliant with the dog, and clearly does this because she loves it."</p>
+        <figcaption class="who">— Emma, Prestonpans</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="wrap reveal">
+    <h2 class="sec-head">Cava Crew &amp; me</h2>
+    <p class="sec-sub">The face behind the lead</p>
+    <div class="about-grid">
+      <div class="ph"><img src="assets/kayleigh-640.webp" srcset="assets/kayleigh-400.webp 400w, assets/kayleigh-640.webp 640w" sizes="(max-width:760px) 320px, 40vw" width="640" height="800" loading="lazy" decoding="async" alt="Kayleigh, owner and dog walker at Cava Crew in East Lothian" /></div>
+      <div>
+        <p>Looking after dogs is honestly the best part of my day — and the reason Cava Crew exists. I'm Kayleigh: dog mum of two, law graduate and part-time barista, and the one at the other end of the lead.</p>
+        <p>My own two get thoroughly spoiled at home, and I set out to give the dogs of East Lothian exactly the same. Your dog gets the same familiar face every single time, walks built around what they actually love, and regular photo updates so you can see all the fun they've been having while you're busy.</p>
+        <div class="cta" style="justify-content:flex-start"><a class="btn btn--ghost" href="#contact">Get in touch</a></div>
       </div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <span id="top"></span>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div class="hero-text">
-        <p class="eyebrow reveal">Web design for dog walkers</p>
-        <h1 class="reveal">Websites for dog walkers, built by a <span class="accent">dog&#8209;walker.</span></h1>
-        <p class="lead reveal">I run Out You Go here in Woodstock, and I build fast, accessible, easy-to-find websites for dog walkers across the UK.</p>
-        <div class="cta-row reveal">
-          <a class="btn" href="#quote">Let's have a chat</a>
-        </div>
-      </div>
-      <div class="hero-media reveal">
-        <!-- Placeholder: replace this whole .hero-photo div with
-             <img class="hero-photo-img" src="your-photo.jpg" alt="You with a happy dog, or one of your sites on a phone"> -->
-        <div class="hero-photo" role="img" aria-label="Photo placeholder: add a photo of you with a dog, or a finished site on a phone">
-          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 16l-5-5L5 19"/></svg>
-          <span class="ph-label">Add your photo</span>
-          <span class="ph-hint">You with a happy dog, or a finished site on a phone.</span>
-        </div>
-      </div>
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="wrap reveal">
+    <h2 class="sec-head">Dog walking in East Lothian — FAQs</h2>
+    <p class="sec-sub">The questions owners ask most</p>
+    <div class="faq">
+      <details>
+        <summary>Which areas of East Lothian do you cover?</summary>
+        <div class="faq-a"><p>Cava Crew covers Musselburgh, Wallyford, Prestonpans and the surrounding areas. Get in touch to check we cover your area.</p></div>
+      </details>
+      <details>
+        <summary>Are you insured and DBS-checked?</summary>
+        <div class="faq-a"><p>Yes. Cava Crew is fully insured, DBS-checked and trained in ITC canine first aid, and every walk is owner-led by Kayleigh.</p></div>
+      </details>
+      <details>
+        <summary>What dog walking services do you offer?</summary>
+        <div class="faq-a"><p>Regular small-group walks and drop-in home visits, plus occasional adventure days out — chosen to suit your dog and your routine.</p></div>
+      </details>
+      <details>
+        <summary>How do I book a dog walker with Cava Crew?</summary>
+        <div class="faq-a"><p>Send a quick enquiry through the contact form or call 07505 907165, and Kayleigh will come back to you, usually the same day.</p></div>
+      </details>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- OFFER -->
-  <section id="offer" class="watermark">
-    <div class="wrap">
-      <div class="section-head center">
-        <p class="eyebrow reveal">The offer</p>
-        <h2 class="reveal">Your website, sorted<br/>for £99.</h2>
-        <p class="reveal">A complete, custom website for your dog-walking business. Built properly, priced fairly, with nothing hidden.</p>
-      </div>
-
-      <div class="offer-card reveal">
-        <span class="offer-badge">Only 3 spaces left</span>
-        <div class="offer-price">£99 <span class="unit">one-off</span></div>
-        <p class="offer-note">Everything you need to launch, included:</p>
-        <ul class="offer-includes">
-          <li><span class="tick"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span>A custom-designed website</li>
-          <li><span class="tick"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span>Hosting for 12 months</li>
-          <li><span class="tick"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span>A domain name, if you don't already have one</li>
-        </ul>
-        <a class="btn" href="#quote">Let's have a chat</a>
-      </div>
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="wrap reveal">
+    <h2 class="sec-head">Get in touch</h2>
+    <div class="narrow">
+      <p>Tell me a little about your dog and what you're after, and I'll come straight back with availability and a price — usually the same day.</p>
     </div>
-  </section>
 
-  <!-- PROCESS -->
-  <section id="process">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow reveal">How it works</p>
-        <h2 class="reveal">From first chat to launch in three steps.</h2>
+    <!--
+      ENQUIRY FORM.
+      • Out of the box it opens the visitor's email app pre-addressed to Kayleigh (works with no server).
+      • RECOMMENDED: paste a free Formspree endpoint into FORMSPREE_ENDPOINT in the script below.
+        The form will then send in-place and show a success message — no email app needed.
+    -->
+    <div id="formMsg" class="form-msg" role="status" aria-live="polite" hidden></div>
+    <form id="enquiryForm" novalidate onsubmit="return sendEnquiry(event)">
+      <div class="field row">
+        <div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" required autocomplete="name" /></div>
+        <div class="field"><label for="dog">Your dog(s)</label><input id="dog" name="dog" type="text" placeholder="Name &amp; breed" /></div>
       </div>
-      <div class="steps">
-        <div class="step reveal">
-          <div class="num">01</div>
-          <h3>Have a chat</h3>
-          <p>We talk through your business, the areas you cover, and the kind of clients you want more of.</p>
-        </div>
-        <div class="step reveal">
-          <div class="num">02</div>
-          <h3>Design &amp; build</h3>
-          <p>I design around your brand and build it to be fast, accessible, and easy to use on any device.</p>
-        </div>
-        <div class="step reveal">
-          <div class="num">03</div>
-          <h3>Launch &amp; look after</h3>
-          <p>We go live, get everything set up for local search, and I keep your site running and looked after.</p>
-        </div>
+      <div class="field row">
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email" /></div>
+        <div class="field"><label for="phone">Phone <span style="font-weight:400;color:var(--olive)">(optional)</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div>
       </div>
+      <div class="field row">
+        <div class="field"><label for="service">What you're after</label>
+          <select id="service" name="service">
+            <option>Group walks</option><option>Adventure days out</option><option>Drop-in visits</option><option>A mix — not sure yet</option>
+          </select>
+        </div>
+        <div class="field"><label for="area">Where you are</label><input id="area" name="area" type="text" placeholder="e.g. Haddington" /></div>
+      </div>
+      <div class="field"><label for="message">Anything else?</label><textarea id="message" name="message" placeholder="Your dog's routine, days you need, any quirks I should know about…"></textarea></div>
+      <button class="btn" type="submit">Get my price</button>
+      <p class="form-note">No obligation — just a friendly chat about what your dog needs.</p>
+    </form>
+
+    <div class="contacts">
+      <a href="tel:+447505907165"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L20 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>07505 907165</a>
+      <a href="mailto:cavacrew@outlook.com"><svg viewBox="0 0 24 24"><path d="M3 6h18v12H3Z"/><path d="M3 7l9 6 9-6"/></svg>cavacrew@outlook.com</a>
+      <a href="https://instagram.com/thecavacrew_" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>@thecavacrew_</a>
     </div>
-  </section>
+    <div class="area-tag">Serving East Lothian</div>
+  </div>
+</section>
+</main>
 
-  <!-- REVIEWS -->
-  <section id="reviews" class="watermark">
-    <div class="wrap">
-      <div class="section-head center">
-        <p class="eyebrow reveal">Reviews</p>
-        <h2 class="reveal">What clients say.</h2>
-      </div>
-      <div class="quotes single">
-        <div class="quote reveal" role="note" aria-label="Placeholder review, to be replaced with a real client quote">
-          <div class="stars" aria-hidden="true">★★★★★</div>
-          <p>This is where a real client review will go. Once your first site is live, swap this for a genuine quote from a happy business owner.</p>
-          <div class="who">Your first review<span>Replace with a real client quote before launch</span></div>
-        </div>
-      </div>
+<footer class="site">
+  <div class="wrap">
+    <a href="#top" class="logo-link" aria-label="Cava Crew — home"><img src="assets/logo-140.webp" width="62" height="62" loading="lazy" decoding="async" alt="Cava Crew logo" /></a>
+    <div class="fname">CAVA CREW</div>
+    <div class="fsub">Dog Walking Services</div>
+    <div class="fcontact">
+      <a href="tel:+447505907165">07505 907165</a>
+      <a href="mailto:cavacrew@outlook.com">cavacrew@outlook.com</a>
+      <a href="https://instagram.com/thecavacrew_" target="_blank" rel="noopener">@thecavacrew_</a>
     </div>
-  </section>
-
-  <!-- FEATURES -->
-  <section id="features">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow reveal">What I build</p>
-        <h2 class="reveal">Built properly, from the ground up.</h2>
-        <p class="reveal">Every custom website I build is:</p>
-      </div>
-      <ul class="area-list reveal">
-        <li><span class="tag">Mobile and desktop friendly</span></li>
-        <li><span class="tag">Accessibility conscious</span></li>
-        <li><span class="tag">Optimised for local SEO</span></li>
-        <li><span class="tag">Fast, clean and easy to use</span></li>
-      </ul>
-      <p class="reveal" style="margin-top:30px; max-width:64ch; font-size:1.05rem;">I don't make unrealistic promises about search rankings. A website is only one part of local SEO, but I make sure yours is built on a solid foundation.</p>
-    </div>
-  </section>
-
-  <!-- FINAL CTA -->
-  <section id="quote" class="final watermark">
-    <div class="wrap">
-      <p class="eyebrow reveal" style="text-align:center;">Let's talk</p>
-      <h2 class="reveal">Thinking about a website<br/>for your business?</h2>
-      <p class="reveal">Send me a message and let's have a chat. No pressure, no jargon, just a friendly conversation about what you need.</p>
-      <div class="reveal">
-        <a class="btn" href="mailto:hello@outyougo.co.uk?subject=Website%20enquiry">Send me a message</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="wrap">
-      <div class="foot-grid">
-        <div>
-          <a class="logo" href="#top">
-            <span class="mark">Out You Go<span class="dot">.</span></span>
-            <span class="sub">Dog Walking</span>
-          </a>
-          <p style="margin-top:18px; max-width:26ch;">Websites for dog walkers, built by a dog walker in Woodstock, Oxfordshire.</p>
-        </div>
-        <div class="foot-links">
-          <div class="foot-col">
-            <h4>Studio</h4>
-            <a href="#offer">Pricing</a>
-            <a href="#process">Process</a>
-            <a href="#features">What's included</a>
-          </div>
-          <div class="foot-col">
-            <h4>Out You Go</h4>
-            <a href="index.html">Dog walking</a>
-            <a href="mailto:hello@outyougo.co.uk">hello@outyougo.co.uk</a>
-            <a href="tel:+447700900000">07700 900000</a>
-          </div>
-        </div>
-      </div>
-      <div class="copy">© 2026 Out You Go Dog Walking. All rights reserved.</div>
-    </div>
-  </footer>
-
+    <div class="copy">© <span id="yr"></span> Cava Crew. Made with care, one walk at a time 🐾</div>
+  </div>
+</footer>
 </div><!-- /#page -->
 
-  <!-- ACCESSIBILITY WIDGET -->
-  <div class="a11y-widget">
-    <button class="a11y-fab" id="a11yFab" aria-label="Open accessibility menu" aria-expanded="false" aria-controls="a11yPanel">
-      <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="3.6" r="2"/><path d="M21 8.6c0 .68-.58 1.2-1.27 1.1L15 9.05V12l2.18 8.35c.2.78-.39 1.55-1.2 1.55-.5 0-.96-.31-1.14-.78L12 14.4l-2.84 6.72c-.18.47-.64.78-1.14.78-.8 0-1.4-.77-1.19-1.55L9 12V9.05l-4.73.65C3.58 9.8 3 9.28 3 8.6c0-.55.4-1.02.95-1.1l6.3-1.05c1.16-.2 2.34-.2 3.5 0l6.3 1.05c.55.08.95.55.95 1.1z"/></svg>
-    </button>
-
-    <div class="a11y-panel" id="a11yPanel" role="dialog" aria-label="Accessibility menu" aria-hidden="true">
-      <div class="a11y-head">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="3.6" r="2"/><path d="M21 8.6c0 .68-.58 1.2-1.27 1.1L15 9.05V12l2.18 8.35c.2.78-.39 1.55-1.2 1.55-.5 0-.96-.31-1.14-.78L12 14.4l-2.84 6.72c-.18.47-.64.78-1.14.78-.8 0-1.4-.77-1.19-1.55L9 12V9.05l-4.73.65C3.58 9.8 3 9.28 3 8.6c0-.55.4-1.02.95-1.1l6.3-1.05c1.16-.2 2.34-.2 3.5 0l6.3 1.05c.55.08.95.55.95 1.1z"/></svg>
-        <span class="title">Accessibility menu</span>
-        <button id="a11yReset" aria-label="Reset all accessibility settings" title="Reset">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
-        </button>
-        <button id="a11yClose" aria-label="Close accessibility menu" title="Close">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
-        </button>
-      </div>
-
-      <div class="a11y-body">
-        <button class="a11y-lang" id="a11yLang" aria-expanded="false">
-          <span class="flag">EN</span>
-          <span class="lname">English (English)</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9aa3b2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
-        </button>
-        <p class="a11y-lang-note" id="a11yLangNote" hidden>On-site translation isn’t connected yet.</p>
-
-        <p class="a11y-section-label">Content adjustments</p>
-
-        <div class="a11y-grid">
-          <!-- Adjust Font Size (wide) -->
-          <div class="a11y-tile wide">
-            <span class="wide-label">Adjust Font Size</span>
-            <div class="a11y-stepper">
-              <button class="a11y-step" id="a11yFontMinus" aria-label="Decrease font size">&minus;</button>
-              <span class="a11y-pct" id="a11yPct" aria-live="polite">100%</span>
-              <button class="a11y-step" id="a11yFontPlus" aria-label="Increase font size">+</button>
-            </div>
-          </div>
-
-          <!-- Highlight Title -->
-          <button class="a11y-tile" data-cls="a11y-highlight-titles" aria-pressed="false">
-            <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M9 9h6M12 9v6" stroke-linecap="round"/></svg></span>
-            Highlight Title
-          </button>
-
-          <!-- Highlight Links -->
-          <button class="a11y-tile" data-cls="a11y-highlight-links" aria-pressed="false">
-            <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a3 3 0 0 0 4.24 0l2.83-2.83a3 3 0 0 0-4.24-4.24l-1 1"/><path d="M14 11a3 3 0 0 0-4.24 0l-2.83 2.83a3 3 0 0 0 4.24 4.24l1-1"/></svg></span>
-            Highlight Links
-          </button>
-
-          <!-- Dyslexia Font -->
-          <button class="a11y-tile" data-cls="a11y-dyslexic" data-dyslexic="1" aria-pressed="false">
-            <span class="ic"><span class="gly">Df</span></span>
-            Dyslexia Font
-          </button>
-
-          <!-- Letter Spacing -->
-          <button class="a11y-tile" data-cls="a11y-letter-spacing" aria-pressed="false">
-            <span class="ic"><svg width="28" height="22" viewBox="0 0 30 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16l-2.5-7L2 16M3 13.5h3"/><path d="M23 9l2.5 7L28 9M24 13.5h3"/><path d="M15 4v16M12 7l3-3 3 3M12 17l3 3 3-3"/></svg></span>
-            Letter Spacing
-          </button>
-
-          <!-- Line Height -->
-          <button class="a11y-tile" data-cls="a11y-line-height" aria-pressed="false">
-            <span class="ic"><svg width="24" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3v18M4 3l-2 2.5M4 3l2 2.5M4 21l-2-2.5M4 21l2-2.5"/><path d="M10 6h11M10 12h11M10 18h11"/></svg></span>
-            Line Height
-          </button>
-
-          <!-- Font Weight -->
-          <button class="a11y-tile" data-cls="a11y-font-weight" aria-pressed="false">
-            <span class="ic"><span class="gly" style="font-weight:900;font-size:21px">T</span></span>
-            Font Weight
-          </button>
-
-          <!-- Align Left -->
-          <button class="a11y-tile" data-cls="a11y-align-left" aria-pressed="false">
-            <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h16M4 12h10M4 18h13"/></svg></span>
-            Align Left
-          </button>
-        </div>
-
-        <p class="a11y-section-label">Colour adjustments</p>
-        <div class="a11y-grid">
-          <!-- Light Contrast -->
-          <button class="a11y-tile" data-axis="c" data-filter="brightness(1.06) contrast(1.08)" aria-pressed="false">
-            <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span>
-            Light Contrast
-          </button>
-          <!-- High Contrast -->
-          <button class="a11y-tile" data-axis="c" data-filter="contrast(1.55)" aria-pressed="false">
-            <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></span>
-            High Contrast
-          </button>
-          <!-- High Saturation -->
-          <button class="a11y-tile" data-axis="s" data-filter="saturate(1.9)" aria-pressed="false">
-            <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"><path d="M12 3.5c3.2 3.4 5.5 6.3 5.5 9.1A5.5 5.5 0 0 1 6.5 12.6c0-2.8 2.3-5.7 5.5-9.1z"/></svg></span>
-            High Saturation
-          </button>
-          <!-- Low Saturation -->
-          <button class="a11y-tile" data-axis="s" data-filter="saturate(0.45)" aria-pressed="false">
-            <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.5c3.2 3.4 5.5 6.3 5.5 9.1A5.5 5.5 0 0 1 6.5 12.6c0-2.8 2.3-5.7 5.5-9.1z"/></svg></span>
-            Low Saturation
-          </button>
-          <!-- Monochrome -->
-          <button class="a11y-tile" data-axis="s" data-filter="grayscale(1)" aria-pressed="false">
-            <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 3v18" /><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></span>
-            Monochrome
-          </button>
-        </div>
-
-        <p class="a11y-section-label">Navigation adjustments</p>
-        <div class="a11y-grid">
-          <!-- Reading Guide -->
-          <button class="a11y-tile" id="a11yGuide" aria-pressed="false">
-            <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 7h18M3 17h18"/><rect x="3" y="10.5" width="18" height="3" rx="1" fill="currentColor" stroke="none"/></svg></span>
-            Reading Guide
-          </button>
-          <!-- Stop Animations -->
-          <button class="a11y-tile" data-cls="a11y-stop-anim" aria-pressed="false">
-            <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="8.6" y="4" width="2.3" height="9" rx="1" fill="currentColor" stroke="none"/><rect x="13.1" y="4" width="2.3" height="9" rx="1" fill="currentColor" stroke="none"/><path d="M4 18h16M4 21h11"/></svg></span>
-            Stop Animations
-          </button>
-          <!-- Big Cursor -->
-          <button class="a11y-tile" id="a11yBigCursor" aria-pressed="false">
-            <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M5 2 L5 18 L9 14 L11.6 19.5 L13.6 18.6 L11 13.2 L16 13.2 Z"/></svg></span>
-            Big Cursor
-          </button>
-        </div>
-
-        <button class="a11y-reset-all" id="a11yResetAll">Reset settings</button>
-      </div>
-    </div>
-    <div class="a11y-guide" id="a11yGuideBar" hidden></div>
+<!-- ===== Accessibility widget ===== -->
+<button id="a11yFab" class="a11y-fab" type="button" aria-label="Open accessibility menu" aria-expanded="false" aria-controls="a11yPanel"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.3" r="1.9" fill="currentColor" stroke="none"/><path d="M4.5 8.3c2.4 .95 4.9 1.4 7.5 1.4s5.1-.45 7.5-1.4"/><path d="M12 8.7v6.1"/><path d="M8.8 20.5 12 14.8l3.2 5.7"/></svg></button>
+<div id="a11yPanel" class="a11y-panel" role="dialog" aria-label="Accessibility menu" aria-hidden="true">
+  <div class="a11y-head">
+    <h2>Accessibility</h2>
+    <button class="a11y-iconbtn" type="button" data-act="reset" aria-label="Reset all accessibility settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M3.6 4v4h4"/></svg></button>
+    <button class="a11y-iconbtn" type="button" data-act="close" aria-label="Close accessibility menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6 18 18M18 6 6 18"/></svg></button>
   </div>
+  <div class="a11y-body">
+    <div class="a11y-section">
+      <p class="a11y-seclabel">Language</p>
+      <button class="a11y-lang" type="button" data-act="lang" aria-expanded="false" aria-controls="a11yLangNote">
+        <span class="lbl">Language</span><span class="cur">English <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span>
+      </button>
+      <p class="a11y-langnote" id="a11yLangNote" data-el="langnote" hidden>On-site translation isn't connected yet.</p>
+    </div>
+    <div class="a11y-section">
+      <p class="a11y-seclabel">Content adjustments</p>
+      <div class="a11y-grid"><div class="a11y-step a11y-wide"><span class="lbl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18 6.4 7.5 9.8 18"/><path d="M4.1 14.4h4.6"/><path d="M13.4 18 16.4 9.6 19.4 18"/><path d="M14.3 15.3h4.2"/></svg>Font size</span><span class="ctrls"><button class="a11y-stepbtn" type="button" data-act="font-dec" aria-label="Decrease font size">−</button><span class="a11y-pct" data-el="pct" aria-live="polite">100%</span><button class="a11y-stepbtn" type="button" data-act="font-inc" aria-label="Increase font size">+</button></span></div><button class="a11y-tile" type="button" aria-pressed="false" data-class="a11y-hl-title"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h6"/><path d="M14.4 4.6 19 9.2 11 17.2l-4 1 1-4z"/></svg></span><span class="lbl">Highlight Title</span></button><button class="a11y-tile" type="button" aria-pressed="false" data-class="a11y-hl-links"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 13.5a3.5 3.5 0 0 0 5 0l2-2a3.5 3.5 0 0 0-5-5l-1 1"/><path d="M13.5 10.5a3.5 3.5 0 0 0-5 0l-2 2a3.5 3.5 0 0 0 5 5l1-1"/></svg></span><span class="lbl">Highlight Links</span></button><button class="a11y-tile" type="button" aria-pressed="false" data-class="a11y-dyslexia"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="13" r="3"/><circle cx="16" cy="13" r="3"/><path d="M11 13h2"/><path d="M5.5 10.5 6.6 8M18.5 10.5 17.4 8"/></svg></span><span class="lbl">Dyslexia Font</span></button><button class="a11y-tile" type="button" aria-pressed="false" data-class="a11y-spacing"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5v14"/><path d="M20 5v14"/><path d="M8.5 12h7"/><path d="M8.5 12 10.5 10M8.5 12l2 2M15.5 12l-2-2M15.5 12l-2 2"/></svg></span><span class="lbl">Letter Spacing</span></button><button class="a11y-tile" type="button" aria-pressed="false" data-class="a11y-lineheight"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 6h10"/><path d="M10 12h10"/><path d="M10 18h10"/><path d="M5 5v14"/><path d="M5 5 3.6 6.4M5 5l1.4 1.4M5 19l-1.4-1.4M5 19l1.4 1.4"/></svg></span><span class="lbl">Line Height</span></button><button class="a11y-tile" type="button" aria-pressed="false" data-class="a11y-bold"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 5h5.5a3.2 3.2 0 0 1 0 6.5H7.5z"/><path d="M7.5 11.5h6.4a3.2 3.2 0 0 1 0 6.5H7.5z"/></svg></span><span class="lbl">Font Weight</span></button><button class="a11y-tile" type="button" aria-pressed="false" data-class="a11y-alignleft"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 10h9"/><path d="M4 14h16"/><path d="M4 18h9"/></svg></span><span class="lbl">Align Left</span></button></div>
+    </div>
+    <div class="a11y-section">
+      <p class="a11y-seclabel">Colour adjustments</p>
+      <div class="a11y-grid"><button class="a11y-tile" type="button" aria-pressed="false" data-axis="c" data-filter="brightness(1.06) contrast(1.08)"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.2"/><path d="M12 3.8a8.2 8.2 0 0 1 0 16.4z" fill="currentColor" stroke="none"/></svg></span><span class="lbl">Light Contrast</span></button><button class="a11y-tile" type="button" aria-pressed="false" data-axis="c" data-filter="contrast(1.55)"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.2"/><path d="M12 3.8a8.2 8.2 0 0 1 0 16.4z" fill="currentColor" stroke="none"/></svg></span><span class="lbl">High Contrast</span></button><button class="a11y-tile" type="button" aria-pressed="false" data-axis="s" data-filter="saturate(1.9)"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.2s6.2 6.6 6.2 11.1A6.2 6.2 0 0 1 5.8 14.3C5.8 9.8 12 3.2 12 3.2z"/></svg></span><span class="lbl">High Saturation</span></button><button class="a11y-tile" type="button" aria-pressed="false" data-axis="s" data-filter="saturate(0.45)"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.2s6.2 6.6 6.2 11.1A6.2 6.2 0 0 1 5.8 14.3C5.8 9.8 12 3.2 12 3.2z"/></svg></span><span class="lbl">Low Saturation</span></button><button class="a11y-tile" type="button" aria-pressed="false" data-axis="s" data-filter="grayscale(1)"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.2"/><path d="M12 3.8a8.2 8.2 0 0 0 0 16.4z" fill="currentColor" stroke="none"/></svg></span><span class="lbl">Monochrome</span></button></div>
+    </div>
+    <div class="a11y-section">
+      <p class="a11y-seclabel">Navigation adjustments</p>
+      <div class="a11y-grid"><button class="a11y-tile" type="button" aria-pressed="false" data-act="guide"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M3 12h18"/><path d="M3 8h18" opacity=".4"/><path d="M3 16h18" opacity=".4"/></svg></span><span class="lbl">Reading Guide</span></button><button class="a11y-tile" type="button" aria-pressed="false" data-class="a11y-nomotion"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="5" width="3.4" height="14" rx="1.1" fill="currentColor" stroke="none"/><rect x="13.6" y="5" width="3.4" height="14" rx="1.1" fill="currentColor" stroke="none"/></svg></span><span class="lbl">Stop Animations</span></button><button class="a11y-tile" type="button" aria-pressed="false" data-act="bigcursor"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4 19 10.5 13.4 12.4 11.6 18z" fill="currentColor" stroke="none"/></svg></span><span class="lbl">Big Cursor</span></button></div>
+    </div>
+    <button class="a11y-resetbtn" type="button" data-act="reset"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M3.6 4v4h4"/></svg>Reset settings</button>
+  </div>
+</div>
+<div id="a11yGuide" class="a11y-guide" aria-hidden="true"></div>
 
-  <script>
-    // Scroll reveal — respects reduced motion (CSS handles the disable)
-    const items = document.querySelectorAll('.reveal');
-    if ('IntersectionObserver' in window) {
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-        });
-      }, { threshold: 0.12 });
-      items.forEach((el) => io.observe(el));
-    } else {
-      items.forEach((el) => el.classList.add('in'));
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const els = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((en)=>{en.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+    els.forEach(el=>io.observe(el));
+  } else { els.forEach(el=>el.classList.add('in')); }
+
+  // ---- enquiry form ----
+  // Paste a free Formspree endpoint here to receive enquiries in a dashboard with in-page confirmation:
+  //   const FORMSPREE_ENDPOINT = "https://formspree.io/f/yourid";
+  const FORMSPREE_ENDPOINT = "";
+
+  // pre-select the service when arriving from a specific service's button
+  document.querySelectorAll('[data-service]').forEach(a=>{
+    a.addEventListener('click',()=>{ const sel=document.getElementById('service'); if(sel) sel.value=a.dataset.service; });
+  });
+
+  const _form=document.getElementById('enquiryForm');
+  const _msg=document.getElementById('formMsg');
+  function _showMsg(type,html){ _msg.className='form-msg '+type; _msg.innerHTML=html; _msg.hidden=false; _msg.scrollIntoView({behavior:'smooth',block:'center'}); }
+  const _help='email <a href="mailto:cavacrew@outlook.com">cavacrew@outlook.com</a> or call 07505 907165.';
+
+  async function sendEnquiry(e){
+    e.preventDefault();
+    if(!_form.checkValidity()){ _form.reportValidity(); return false; }
+
+    if(FORMSPREE_ENDPOINT){
+      const btn=_form.querySelector('button[type=submit]'); const label=btn.textContent;
+      btn.disabled=true; btn.textContent='Sending…';
+      try{
+        const res=await fetch(FORMSPREE_ENDPOINT,{method:'POST',body:new FormData(_form),headers:{'Accept':'application/json'}});
+        if(res.ok){ _form.hidden=true; _showMsg('success','Thanks — your enquiry is on its way! I\'ll be in touch, usually the same day. 🐾'); }
+        else { _showMsg('error','Sorry, that didn\'t send. Please '+_help); btn.disabled=false; btn.textContent=label; }
+      }catch(err){ _showMsg('error','Couldn\'t send just now. Please '+_help); btn.disabled=false; btn.textContent=label; }
+      return false;
     }
-  </script>
 
-  <script>
-    // ===== Centered jump-to-section scrolling =====
-    (function () {
-      const HEADER = 84;
-      function prefersNoMotion() {
-        const page = document.getElementById('page');
-        return window.matchMedia('(prefers-reduced-motion: reduce)').matches
-          || (page && page.classList.contains('a11y-stop-anim'));
+    // fallback: open the visitor's email app with a pre-filled enquiry
+    const v=id=>(document.getElementById(id).value||'').trim();
+    const body='New enquiry from the Cava Crew website%0D%0A%0D%0A'+
+      'Name: '+encodeURIComponent(v('name'))+'%0D%0A'+'Dog(s): '+encodeURIComponent(v('dog'))+'%0D%0A'+
+      'Email: '+encodeURIComponent(v('email'))+'%0D%0A'+'Phone: '+encodeURIComponent(v('phone'))+'%0D%0A'+
+      'Service: '+encodeURIComponent(v('service'))+'%0D%0A'+'Area: '+encodeURIComponent(v('area'))+'%0D%0A'+
+      'Message: '+encodeURIComponent(v('message'));
+    window.location.href='mailto:cavacrew@outlook.com?subject='+encodeURIComponent('Dog walking enquiry — '+(v('name')||'Website'))+'&body='+body;
+    _showMsg('success','Your email app should have opened with your enquiry ready to send. If not, please '+_help);
+    return false;
+  }
+</script>
+
+<!-- ===== Accessibility widget logic ===== -->
+<script>
+(function(){
+  var page = document.getElementById('page');
+  var fab = document.getElementById('a11yFab');
+  var panel = document.getElementById('a11yPanel');
+  var guide = document.getElementById('a11yGuide');
+  if(!page || !fab || !panel) return;
+  var html = document.documentElement;
+  var closeBtn = panel.querySelector('[data-act="close"]');
+  var pctLabel = panel.querySelector('[data-el="pct"]');
+  var langBtn  = panel.querySelector('[data-act="lang"]');
+  var langNote = panel.querySelector('[data-el="langnote"]');
+
+  /* ---- open / close ---- */
+  var open = false;
+  function onKey(e){ if(e.key === 'Escape') closePanel(); }
+  function onDown(e){ if(!panel.contains(e.target) && !fab.contains(e.target)) closePanel(); }
+  function openPanel(){
+    open = true; panel.classList.add('is-open'); panel.setAttribute('aria-hidden','false');
+    fab.setAttribute('aria-expanded','true');
+    closeBtn.focus();
+    document.addEventListener('keydown', onKey); document.addEventListener('mousedown', onDown);
+  }
+  function closePanel(){
+    open = false; panel.classList.remove('is-open'); panel.setAttribute('aria-hidden','true');
+    fab.setAttribute('aria-expanded','false');
+    document.removeEventListener('keydown', onKey); document.removeEventListener('mousedown', onDown);
+    fab.focus();
+  }
+  fab.addEventListener('click', function(){ open ? closePanel() : openPanel(); });
+  closeBtn.addEventListener('click', closePanel);
+
+  /* ---- dyslexia font loaded on demand ---- */
+  var dysLoaded = false;
+  function loadDyslexia(){
+    if(dysLoaded) return; dysLoaded = true;
+    var l = document.createElement('link');
+    l.rel = 'stylesheet'; l.href = 'https://fonts.cdnfonts.com/css/opendyslexic';
+    document.head.appendChild(l);
+  }
+
+  /* ---- simple class toggles on #page ---- */
+  panel.querySelectorAll('[data-class]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var cls = btn.getAttribute('data-class');
+      var on  = btn.getAttribute('aria-pressed') === 'true';
+      if(on){ page.classList.remove(cls); btn.setAttribute('aria-pressed','false'); }
+      else { if(cls === 'a11y-dyslexia') loadDyslexia(); page.classList.add(cls); btn.setAttribute('aria-pressed','true'); }
+      if(cls === 'a11y-nomotion'){
+        if(!on){ html.style.scrollBehavior = 'auto'; page.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); }); }
+        else { html.style.scrollBehavior = ''; }
       }
-      function scrollToCentered(el) {
-        const behavior = prefersNoMotion() ? 'auto' : 'smooth';
-        const vh = window.innerHeight;
-        const rect = el.getBoundingClientRect();
-        const elH = rect.height;
-        const elTop = rect.top + window.scrollY;
-        let target;
-        if (elH <= vh - HEADER - 24) {
-          target = elTop - (vh - elH) / 2;      // fits on screen: centre it
-        } else {
-          target = elTop - HEADER - 16;          // taller than screen: clear the header
-        }
-        const docH = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
-        target = Math.max(0, Math.min(target, docH - vh));
-        window.scrollTo({ top: target, behavior: behavior });
+    });
+  });
 
-        // Move focus so keyboard / screen-reader users follow, without re-scrolling.
-        const hadTab = el.hasAttribute('tabindex');
-        if (!hadTab) el.setAttribute('tabindex', '-1');
-        el.focus({ preventScroll: true });
-        if (!hadTab) {
-          el.addEventListener('blur', function clean() {
-            el.removeAttribute('tabindex');
-            el.removeEventListener('blur', clean);
-          });
-        }
-      }
-      document.addEventListener('click', function (e) {
-        const a = e.target.closest('a[href^="#"]');
-        if (!a) return;
-        const hash = a.getAttribute('href');
-        if (!hash || hash === '#') return;
-        const el = document.getElementById(hash.slice(1));
-        if (!el) return;
-        e.preventDefault();
-        scrollToCentered(el);
-        if (history.pushState) history.pushState(null, '', hash);
-        else location.hash = hash;
-      });
-    })();
-  </script>
-  <script>
-    // ===== Mobile nav dropdown =====
-    (function () {
-      const toggle = document.getElementById('navToggle');
-      const menu = document.getElementById('navLinks');
-      function close() { menu.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }
-      function open()  { menu.classList.add('open');    toggle.setAttribute('aria-expanded', 'true');  }
-      toggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        menu.classList.contains('open') ? close() : open();
-      });
-      // Close after picking a destination, on outside tap, or Escape
-      menu.addEventListener('click', (e) => { if (e.target.tagName === 'A') close(); });
-      document.addEventListener('click', (e) => {
-        if (menu.classList.contains('open') && !menu.contains(e.target) && e.target !== toggle) close();
-      });
-      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
-    })();
-  </script>
+  /* ---- colour axes: mutually exclusive per axis, composable across axes ---- */
+  panel.querySelectorAll('[data-axis]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var axis = btn.getAttribute('data-axis');           // 'c' or 's'
+      var prop = (axis === 'c') ? '--a11y-c' : '--a11y-s';
+      var on   = btn.getAttribute('aria-pressed') === 'true';
+      panel.querySelectorAll('[data-axis="'+axis+'"]').forEach(function(b){ b.setAttribute('aria-pressed','false'); });
+      if(on){ page.style.removeProperty(prop); }
+      else { page.style.setProperty(prop, btn.getAttribute('data-filter')); btn.setAttribute('aria-pressed','true'); }
+    });
+  });
 
-  <script>
-    // ===== Accessibility widget =====
-    (function () {
-      const page    = document.getElementById('page');
-      const fab     = document.getElementById('a11yFab');
-      const panel   = document.getElementById('a11yPanel');
-      const closeBtn= document.getElementById('a11yClose');
-      const resetBtn= document.getElementById('a11yReset');
-      const tiles   = panel.querySelectorAll('.a11y-tile[data-cls]');
-      const minus   = document.getElementById('a11yFontMinus');
-      const plus    = document.getElementById('a11yFontPlus');
-      const pct     = document.getElementById('a11yPct');
-      const lang    = document.getElementById('a11yLang');
-      const langNote= document.getElementById('a11yLangNote');
+  /* ---- big cursor (set on <html> so it covers the whole viewport, widget included) ---- */
+  var bigBtn = panel.querySelector('[data-act="bigcursor"]');
+  bigBtn.addEventListener('click', function(){
+    var on = bigBtn.getAttribute('aria-pressed') === 'true';
+    html.classList.toggle('a11y-bigcursor', !on);
+    bigBtn.setAttribute('aria-pressed', on ? 'false' : 'true');
+  });
 
-      let fontPct = 100;
-      const STEP = 10, MIN = 80, MAX = 150;
-      let dyslexicLoaded = false;
+  /* ---- reading guide (listeners attached only while active) ---- */
+  var guideBtn = panel.querySelector('[data-act="guide"]');
+  function moveGuide(e){
+    var y = (e.touches && e.touches[0]) ? e.touches[0].clientY : e.clientY;
+    if(y != null) guide.style.top = y + 'px';
+  }
+  function guideOn(){ guide.classList.add('is-on'); window.addEventListener('mousemove', moveGuide); window.addEventListener('touchmove', moveGuide, {passive:true}); }
+  function guideOff(){ guide.classList.remove('is-on'); window.removeEventListener('mousemove', moveGuide); window.removeEventListener('touchmove', moveGuide); }
+  guideBtn.addEventListener('click', function(){
+    var on = guideBtn.getAttribute('aria-pressed') === 'true';
+    if(on){ guideOff(); guideBtn.setAttribute('aria-pressed','false'); }
+    else { guideOn(); guideBtn.setAttribute('aria-pressed','true'); }
+  });
 
-      function openPanel() {
-        panel.classList.add('open');
-        panel.setAttribute('aria-hidden', 'false');
-        fab.setAttribute('aria-expanded', 'true');
-        closeBtn.focus();
-        document.addEventListener('keydown', onKey);
-        document.addEventListener('mousedown', onOutside);
-      }
-      function closePanel() {
-        panel.classList.remove('open');
-        panel.setAttribute('aria-hidden', 'true');
-        fab.setAttribute('aria-expanded', 'false');
-        document.removeEventListener('keydown', onKey);
-        document.removeEventListener('mousedown', onOutside);
-        fab.focus();
-      }
-      function onKey(e)    { if (e.key === 'Escape') closePanel(); }
-      function onOutside(e){ if (!panel.contains(e.target) && !fab.contains(e.target)) closePanel(); }
+  /* ---- font-size stepper (80-150%, 10% steps) ---- */
+  var pct = 100, MIN = 80, MAX = 150, STEP = 10;
+  function applyFont(){ document.documentElement.style.fontSize = (17.6 * pct / 100) + 'px'; pctLabel.textContent = pct + '%'; }
+  panel.querySelector('[data-act="font-dec"]').addEventListener('click', function(){ pct = Math.max(MIN, pct - STEP); applyFont(); });
+  panel.querySelector('[data-act="font-inc"]').addEventListener('click', function(){ pct = Math.min(MAX, pct + STEP); applyFont(); });
 
-      fab.addEventListener('click', () => panel.classList.contains('open') ? closePanel() : openPanel());
-      closeBtn.addEventListener('click', closePanel);
+  /* ---- language placeholder (display-only; does not translate) ---- */
+  langBtn.addEventListener('click', function(){
+    var exp = langBtn.getAttribute('aria-expanded') === 'true';
+    langBtn.setAttribute('aria-expanded', exp ? 'false' : 'true');
+    langNote.hidden = exp;
+  });
 
-      function applyFont() {
-        document.documentElement.style.fontSize = (16 * fontPct / 100) + 'px';
-        pct.textContent = fontPct + '%';
-      }
-      plus.addEventListener('click',  () => { fontPct = Math.min(MAX, fontPct + STEP); applyFont(); });
-      minus.addEventListener('click', () => { fontPct = Math.max(MIN, fontPct - STEP); applyFont(); });
+  /* ---- reset everything ---- */
+  var EFFECT_CLASSES = ['a11y-hl-title','a11y-hl-links','a11y-dyslexia','a11y-spacing','a11y-lineheight','a11y-bold','a11y-alignleft','a11y-nomotion'];
+  function resetAll(){
+    EFFECT_CLASSES.forEach(function(c){ page.classList.remove(c); });
+    page.style.removeProperty('--a11y-c'); page.style.removeProperty('--a11y-s');
+    html.classList.remove('a11y-bigcursor'); html.style.scrollBehavior = '';
+    document.documentElement.style.fontSize = ''; pct = 100; pctLabel.textContent = '100%';
+    guideOff();
+    panel.querySelectorAll('[aria-pressed]').forEach(function(b){ b.setAttribute('aria-pressed','false'); });
+    langBtn.setAttribute('aria-expanded','false'); langNote.hidden = true;
+  }
+  panel.querySelectorAll('[data-act="reset"]').forEach(function(b){ b.addEventListener('click', resetAll); });
 
-      function loadDyslexic() {
-        if (dyslexicLoaded) return;
-        const l = document.createElement('link');
-        l.rel = 'stylesheet';
-        l.href = 'https://fonts.cdnfonts.com/css/opendyslexic';
-        document.head.appendChild(l);
-        dyslexicLoaded = true;
-      }
+  /* ---- PERSISTENCE (in-memory by default; resets on reload) ----------------------
+     To remember settings on the live site, persist to localStorage and re-apply on load.
+     Uncomment and wire into the handlers above:
 
-      tiles.forEach((t) => {
-        t.addEventListener('click', () => {
-          const on = page.classList.toggle(t.dataset.cls);
-          t.setAttribute('aria-pressed', on ? 'true' : 'false');
-          if (t.dataset.dyslexic && on) loadDyslexic();
-        });
-      });
-
-      lang.addEventListener('click', () => {
-        const open = lang.getAttribute('aria-expanded') === 'true';
-        lang.setAttribute('aria-expanded', String(!open));
-        langNote.hidden = open;
-      });
-
-      // ----- Colour adjustments (mutually exclusive within each axis) -----
-      const colorTiles = panel.querySelectorAll('.a11y-tile[data-axis]');
-      function updateFilterClass() {
-        const has = page.style.getPropertyValue('--a11y-c') || page.style.getPropertyValue('--a11y-s');
-        page.classList.toggle('a11y-color', !!has);
-      }
-      colorTiles.forEach((t) => {
-        t.addEventListener('click', () => {
-          const prop = t.dataset.axis === 's' ? '--a11y-s' : '--a11y-c';
-          const wasOn = t.getAttribute('aria-pressed') === 'true';
-          colorTiles.forEach((o) => { if (o.dataset.axis === t.dataset.axis) o.setAttribute('aria-pressed', 'false'); });
-          if (wasOn) {
-            page.style.removeProperty(prop);
-          } else {
-            t.setAttribute('aria-pressed', 'true');
-            page.style.setProperty(prop, t.dataset.filter);
-          }
-          updateFilterClass();
-        });
-      });
-
-      // ----- Big cursor (on <html> for full coverage) -----
-      const bigCursor = document.getElementById('a11yBigCursor');
-      bigCursor.addEventListener('click', () => {
-        const on = document.documentElement.classList.toggle('a11y-big-cursor');
-        bigCursor.setAttribute('aria-pressed', on ? 'true' : 'false');
-      });
-
-      // ----- Reading guide -----
-      const guideBtn = document.getElementById('a11yGuide');
-      const guideBar = document.getElementById('a11yGuideBar');
-      function moveGuide(e) {
-        const y = e.touches ? e.touches[0].clientY : e.clientY;
-        guideBar.style.top = y + 'px';
-      }
-      guideBtn.addEventListener('click', () => {
-        const on = guideBtn.getAttribute('aria-pressed') !== 'true';
-        guideBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
-        guideBar.hidden = !on;
-        if (on) {
-          document.addEventListener('mousemove', moveGuide);
-          document.addEventListener('touchmove', moveGuide, { passive: true });
-        } else {
-          document.removeEventListener('mousemove', moveGuide);
-          document.removeEventListener('touchmove', moveGuide);
-        }
-      });
-
-      // ----- Reset everything -----
-      function resetAll() {
-        tiles.forEach((t) => { page.classList.remove(t.dataset.cls); t.setAttribute('aria-pressed', 'false'); });
-        colorTiles.forEach((t) => t.setAttribute('aria-pressed', 'false'));
-        page.style.removeProperty('--a11y-c');
-        page.style.removeProperty('--a11y-s');
-        page.classList.remove('a11y-color');
-        document.documentElement.classList.remove('a11y-big-cursor');
-        bigCursor.setAttribute('aria-pressed', 'false');
-        guideBtn.setAttribute('aria-pressed', 'false');
-        guideBar.hidden = true;
-        document.removeEventListener('mousemove', moveGuide);
-        document.removeEventListener('touchmove', moveGuide);
-        fontPct = 100;
-        document.documentElement.style.fontSize = '';
-        pct.textContent = '100%';
-        langNote.hidden = true;
-        lang.setAttribute('aria-expanded', 'false');
-      }
-      resetBtn.addEventListener('click', resetAll);
-      document.getElementById('a11yResetAll').addEventListener('click', resetAll);
-
-      // To remember a visitor's choices across pages on your live site,
-      // you can persist `fontPct` and the active classes with localStorage.
-      // It's left out here so the file previews correctly inside Claude.
-    })();
-  </script>
+     // function save(){ localStorage.setItem('cc-a11y', JSON.stringify({
+     //   pct: pct,
+     //   classes: EFFECT_CLASSES.filter(function(c){ return page.classList.contains(c); }),
+     //   c: page.style.getPropertyValue('--a11y-c'),
+     //   s: page.style.getPropertyValue('--a11y-s'),
+     //   big: html.classList.contains('a11y-bigcursor')
+     // })); }
+     // (call save() at the end of every toggle/stepper handler, and read it back on init,
+     //  re-applying pct via applyFont(), the classes/axes/cursor, and syncing each tile's aria-pressed.)
+  --------------------------------------------------------------------------------- */
+})();
+</script>
 </body>
 </html>
