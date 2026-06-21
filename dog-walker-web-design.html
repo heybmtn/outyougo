@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Out You Go | Websites for Dog Walkers, Built by a Dog Walker</title>
-<meta name="description" content="Fast, accessible, easy-to-find websites for dog walkers across the UK — built by a working dog walker in Woodstock, Oxfordshire." />
+<meta name="description" content="Fast, accessible, easy-to-find websites for dog walkers across the UK, built by a working dog walker in Woodstock, Oxfordshire. Custom site, hosting and domain from £99." />
 <meta name="theme-color" content="#2f63c4" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -257,6 +257,7 @@
     background-size: 400px auto;
   }
   .quotes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 52px; }
+  .quotes.single { grid-template-columns: min(520px, 100%); justify-content: center; }
   .quote {
     background: var(--white);
     border: 1px solid var(--line);
@@ -279,6 +280,36 @@
     font-weight: 500; color: var(--ink-soft);
     font-size: 0.92rem;
   }
+
+  /* ---------- Offer price card ---------- */
+  .offer-card {
+    max-width: 460px;
+    margin: 56px auto 0;
+    background: var(--white);
+    border: 2.5px solid var(--ink);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+    padding: 38px 34px 36px;
+    text-align: center;
+  }
+  .offer-badge {
+    display: inline-block;
+    background: var(--accent-ink); color: #fff;
+    font-weight: 700; font-size: 0.78rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    border-radius: 999px; padding: 8px 16px; margin-bottom: 22px;
+  }
+  .offer-price { font-weight: 800; font-size: 3.2rem; color: var(--ink); line-height: 1; letter-spacing: -0.02em; }
+  .offer-price .unit { font-size: 1.05rem; font-weight: 600; color: var(--body); letter-spacing: 0; }
+  .offer-note { font-size: 0.98rem; color: var(--body); margin: 12px 0 26px; }
+  .offer-includes { list-style: none; text-align: left; display: grid; gap: 14px; margin: 0 0 30px; padding: 0; }
+  .offer-includes li { display: flex; align-items: flex-start; gap: 12px; font-size: 1rem; color: var(--ink-soft); }
+  .offer-includes .tick {
+    flex: 0 0 auto; width: 24px; height: 24px; border-radius: 50%;
+    background: var(--accent); color: #fff;
+    display: flex; align-items: center; justify-content: center; margin-top: 1px;
+  }
+  .offer-card .btn { width: 100%; }
 
   /* ---------- Final CTA ---------- */
   .final { text-align: center; }
@@ -501,7 +532,7 @@
   "@context": "https://schema.org",
   "@type": "Service",
   "serviceType": "Web design for dog walkers",
-  "name": "Out You Go — Web design for dog walkers",
+  "name": "Out You Go: web design for dog walkers",
   "description": "Fast, accessible websites for dog walkers across the UK, built by a working dog walker in Woodstock, Oxfordshire.",
   "url": "https://outyougo.co.uk/dog-walker-web-design",
   "areaServed": { "@type": "Country", "name": "United Kingdom" },
@@ -519,7 +550,7 @@
     }
   },
   "offers": [
-    { "@type": "Offer", "name": "Starter", "priceCurrency": "GBP", "price": "595" }
+    { "@type": "Offer", "name": "Custom website", "priceCurrency": "GBP", "price": "99" }
   ]
 }
 </script>
@@ -561,7 +592,7 @@
         <h1 class="reveal">Websites for dog walkers, built by a <span class="accent">dog&#8209;walker.</span></h1>
         <p class="lead reveal">I run Out You Go here in Woodstock, and I build fast, accessible, easy-to-find websites for dog walkers across the UK.</p>
         <div class="cta-row reveal">
-          <a class="btn" href="#quote">Get a free quote</a>
+          <a class="btn" href="#quote">Let's have a chat</a>
         </div>
       </div>
       <div class="hero-media reveal">
@@ -576,25 +607,25 @@
     </div>
   </section>
 
-  <!-- OFFER / PACKAGES -->
+  <!-- OFFER -->
   <section id="offer" class="watermark">
     <div class="wrap">
       <div class="section-head center">
-        <p class="eyebrow reveal">What you get</p>
-        <h2 class="reveal">Everything your dog-walking<br/>business needs online.</h2>
-        <p class="reveal">No bloated templates, no jargon. A clean, quick site that ranks for your towns and works beautifully on the phone your clients actually use, like the one you're reading now.</p>
+        <p class="eyebrow reveal">The offer</p>
+        <h2 class="reveal">Your website, sorted<br/>for £99.</h2>
+        <p class="reveal">A complete, custom website for your dog-walking business. Built properly, priced fairly, with nothing hidden.</p>
       </div>
 
-      <div class="cards">
-        <div class="card reveal">
-          <div class="icon">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg>
-          </div>
-          <h3>Starter</h3>
-          <p class="price">From £595</p>
-          <p>One polished page — your services, area, reviews and click-to-call. Live within a week.</p>
-          <a class="more" href="#quote" aria-label="Get a quote for the Starter package">Get a quote</a>
-        </div>
+      <div class="offer-card reveal">
+        <span class="offer-badge">Only 3 spaces left</span>
+        <div class="offer-price">£99 <span class="unit">one-off</span></div>
+        <p class="offer-note">Everything you need to launch, included:</p>
+        <ul class="offer-includes">
+          <li><span class="tick"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span>A custom-designed website</li>
+          <li><span class="tick"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span>Hosting for 12 months</li>
+          <li><span class="tick"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span>A domain name, if you don't already have one</li>
+        </ul>
+        <a class="btn" href="#quote">Let's have a chat</a>
       </div>
     </div>
   </section>
@@ -604,23 +635,23 @@
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow reveal">How it works</p>
-        <h2 class="reveal">From first call to launch in three steps.</h2>
+        <h2 class="reveal">From first chat to launch in three steps.</h2>
       </div>
       <div class="steps">
         <div class="step reveal">
           <div class="num">01</div>
-          <h3>Discovery call</h3>
-          <p>We talk through your business, the towns you cover, and the clients you want more of.</p>
+          <h3>Have a chat</h3>
+          <p>We talk through your business, the areas you cover, and the kind of clients you want more of.</p>
         </div>
         <div class="step reveal">
           <div class="num">02</div>
           <h3>Design &amp; build</h3>
-          <p>I design around your brand and build it to be fast, accessible, and easy for you to update.</p>
+          <p>I design around your brand and build it to be fast, accessible, and easy to use on any device.</p>
         </div>
         <div class="step reveal">
           <div class="num">03</div>
-          <h3>Launch &amp; support</h3>
-          <p>We go live, get you found on Google for your area, and I keep everything running and fresh.</p>
+          <h3>Launch &amp; look after</h3>
+          <p>We go live, get everything set up for local search, and I keep your site running and looked after.</p>
         </div>
       </div>
     </div>
@@ -630,21 +661,14 @@
   <section id="reviews" class="watermark">
     <div class="wrap">
       <div class="section-head center">
-        <p class="eyebrow reveal">Why work with me</p>
-        <h2 class="reveal">Built by someone who gets it.</h2>
+        <p class="eyebrow reveal">Reviews</p>
+        <h2 class="reveal">What clients say.</h2>
       </div>
-      <div class="quotes">
-        <div class="quote reveal">
+      <div class="quotes single">
+        <div class="quote reveal" role="note" aria-label="Placeholder review, to be replaced with a real client quote">
           <div class="stars" aria-hidden="true">★★★★★</div>
-          <span class="sr-only">Rated 5 out of 5 stars.</span>
-          <p>He actually understood my business because he does it too. My new-client enquiries doubled in the first month.</p>
-          <div class="who">Hannah R.<span>Paws &amp; Trails, Oxford</span></div>
-        </div>
-        <div class="quote reveal">
-          <div class="stars" aria-hidden="true">★★★★★</div>
-          <span class="sr-only">Rated 5 out of 5 stars.</span>
-          <p>Fast, friendly, and my site finally shows up on Google for all my villages. Worth every penny.</p>
-          <div class="who">Marcus B.<span>Cotswold Dog Walks</span></div>
+          <p>This is where a real client review will go. Once your first site is live, swap this for a genuine quote from a happy business owner.</p>
+          <div class="who">Your first review<span>Replace with a real client quote before launch</span></div>
         </div>
       </div>
     </div>
@@ -654,21 +678,17 @@
   <section id="features">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow reveal">Built in as standard</p>
-        <h2 class="reveal">Included — no surprises.</h2>
-        <p class="reveal">Every site I build comes with the essentials that win local clients.</p>
+        <p class="eyebrow reveal">What I build</p>
+        <h2 class="reveal">Built properly, from the ground up.</h2>
+        <p class="reveal">Every custom website I build is:</p>
       </div>
       <ul class="area-list reveal">
-        <li><span class="tag">Click-to-call</span></li>
-        <li><span class="tag">Google reviews</span></li>
-        <li><span class="tag">Local SEO</span></li>
-        <li><span class="tag">Photo galleries</span></li>
-        <li><span class="tag">Contact forms</span></li>
-        <li><span class="tag">Service-area pages</span></li>
-        <li><span class="tag">Accessibility menu</span></li>
-        <li><span class="tag">Fast hosting</span></li>
-        <li><span class="tag">Mobile-first</span></li>
+        <li><span class="tag">Mobile and desktop friendly</span></li>
+        <li><span class="tag">Accessibility conscious</span></li>
+        <li><span class="tag">Optimised for local SEO</span></li>
+        <li><span class="tag">Fast, clean and easy to use</span></li>
       </ul>
+      <p class="reveal" style="margin-top:30px; max-width:64ch; font-size:1.05rem;">I don't make unrealistic promises about search rankings. A website is only one part of local SEO, but I make sure yours is built on a solid foundation.</p>
     </div>
   </section>
 
@@ -676,10 +696,10 @@
   <section id="quote" class="final watermark">
     <div class="wrap">
       <p class="eyebrow reveal" style="text-align:center;">Let's talk</p>
-      <h2 class="reveal">Ready for a website that<br/>works as hard as you do?</h2>
-      <p class="reveal">Tell me about your dog-walking business and I'll send a free, no-pressure quote.</p>
+      <h2 class="reveal">Thinking about a website<br/>for your business?</h2>
+      <p class="reveal">Send me a message and let's have a chat. No pressure, no jargon, just a friendly conversation about what you need.</p>
       <div class="reveal">
-        <a class="btn" href="mailto:hello@outyougo.co.uk?subject=Website%20enquiry">Get a free quote</a>
+        <a class="btn" href="mailto:hello@outyougo.co.uk?subject=Website%20enquiry">Send me a message</a>
       </div>
     </div>
   </section>
