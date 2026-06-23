@@ -268,6 +268,8 @@
   .quote p { color: var(--ink-soft); font-size: 1.05rem; margin: 16px 0 22px; }
   .quote .who { font-weight: 700; color: var(--ink); font-size: 0.95rem; }
   .quote .who span { display: block; font-weight: 500; color: var(--body); font-size: 0.85rem; }
+  .quote .who span a { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 2px; }
+  .quote .who span a:hover, .quote .who span a:focus-visible { color: var(--accent); }
 
   /* ---------- Area ---------- */
   .area-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px; max-width: 760px; }
@@ -665,10 +667,11 @@
         <h2 class="reveal">What clients say.</h2>
       </div>
       <div class="quotes single">
-        <div class="quote reveal" role="note" aria-label="Placeholder review, to be replaced with a real client quote">
+        <div class="quote reveal">
           <div class="stars" aria-hidden="true">★★★★★</div>
-          <p>This is where a real client review will go. Once your first site is live, swap this for a genuine quote from a happy business owner.</p>
-          <div class="who">Your first review<span>Replace with a real client quote before launch</span></div>
+          <span class="sr-only">Rated 5 out of 5 stars.</span>
+          <p>I would highly recommend Out You Go! Ben is incredibly knowledgeable, professional, and produces outstanding work. As a new business owner, getting started can be overwhelming, especially when you're trying to keep costs manageable. I had been searching for someone to create my business website but was worried it wouldn't match the vision I had in my head. Ben went above and beyond to bring that vision to life. He took the time to understand exactly what I wanted, was extremely helpful throughout the entire process, and made sure every detail was just right. I'm absolutely delighted with the final result and couldn't be happier with my website. If you're looking for someone reliable, talented, and easy to work with, go with Ben!</p>
+          <div class="who">Kayleigh<span><a href="https://cavacrew.co.uk" target="_blank" rel="noopener" aria-label="Cava Crew website (opens in a new tab)">Cava Crew</a></span></div>
         </div>
       </div>
     </div>
