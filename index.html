@@ -457,6 +457,120 @@
     .logo .sub { letter-spacing: 0.16em; }
   }
 
+  /* =====================================================================
+     DESKTOP POLISH  (≥ 861px only — mobile is untouched below this width)
+     Pure CSS, no new requests, AA-safe. Mirrors the sticker/brand system.
+     ===================================================================== */
+  @media (min-width: 861px) {
+
+    /* ----- Hero: a little more headline presence (photo column left as-is) ----- */
+    .hero { padding: 104px 0 96px; }
+    .hero-grid { gap: 64px; align-items: center; }
+    .hero h1 { font-size: clamp(3rem, 5.4vw, 5rem); }
+    .hero .lead { font-size: 1.35rem; max-width: 34ch; }
+
+    /* ----- Walk cards: full sticker hover + accent top-bar + price pill ----- */
+    .cards { gap: 28px; margin-top: 60px; }
+    .card {
+      position: relative; overflow: hidden;
+      border: 2px solid var(--line);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
+    .card::before {
+      content: ""; position: absolute; top: 0; left: 0; right: 0; height: 5px;
+      background: var(--accent);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform .22s ease;
+    }
+    .card:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: var(--shadow);
+      border-color: var(--ink);
+    }
+    .card:hover::before { transform: scaleX(1); }
+    .card:hover .icon { transform: rotate(-6deg) scale(1.04); }
+    .card .icon { transition: transform .2s ease; }
+    .card .price {
+      display: inline-block;
+      background: #eef4fe; color: var(--accent-ink);
+      border-radius: 999px; padding: 5px 14px;
+      font-size: 0.92rem; margin-bottom: 4px;
+    }
+
+    /* ----- How it works: dashed guide line + seated serif numbers ----- */
+    .steps { position: relative; gap: 48px; }
+    .steps::before {
+      content: ""; position: absolute; top: 32px; left: 14%; right: 14%;
+      border-top: 2px dashed #cdd7ea; z-index: 0;
+    }
+    .step { position: relative; z-index: 1; }
+    .step .num {
+      width: 64px; height: 64px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--white);
+      border: 2.5px solid var(--ink);
+      box-shadow: var(--shadow-sm);
+      font-size: 1.7rem; margin-bottom: 22px;
+    }
+
+    /* ----- Reviews: editorial quote mark + sticker card + paw avatar ----- */
+    .quotes { gap: 28px; }
+    .quote {
+      position: relative; overflow: hidden;
+      border: 2.5px solid var(--ink);
+      box-shadow: var(--shadow-sm);
+      padding: 38px 34px 32px;
+      transition: transform .16s ease, box-shadow .16s ease;
+    }
+    .quote::before {
+      content: "\201C";
+      position: absolute; top: 6px; right: 22px;
+      font-family: "Playfair Display", serif; font-weight: 800;
+      font-size: 6rem; line-height: 1; color: #eef0f4;
+      z-index: 0; pointer-events: none;
+    }
+    .quote:hover { transform: translate(-2px, -2px); box-shadow: var(--shadow); }
+    .quote .stars, .quote p, .quote .who { position: relative; z-index: 1; }
+    .quote .who {
+      display: flex; flex-direction: column; justify-content: center;
+      padding-left: 56px; min-height: 44px; position: relative;
+    }
+    .quote .who::before {
+      content: ""; position: absolute; left: 0; top: 50%;
+      transform: translateY(-50%);
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--accent) center / 56% no-repeat
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='%23ffffff'%3E%3Cellipse cx='32' cy='40' rx='7' ry='9'/%3E%3Cellipse cx='48' cy='31' rx='7.5' ry='10'/%3E%3Cellipse cx='65' cy='33' rx='7.5' ry='10'/%3E%3Cellipse cx='78' cy='45' rx='7' ry='9'/%3E%3Cpath d='M54 52c10 0 17 8 17 16 0 7-6 11-13 11-4 0-5-2-9-2s-5 2-9 2c-7 0-13-4-13-11 0-8 8-16 18-16z'/%3E%3C/svg%3E");
+      border: 2.5px solid var(--ink);
+    }
+
+    /* ----- Service area: tidy pills with a quiet hover ----- */
+    .area-list { gap: 12px; margin-top: 40px; }
+    .area-list .tag {
+      border: 1.5px solid var(--line);
+      transition: border-color .14s ease, background .14s ease, color .14s ease, transform .14s ease;
+    }
+    .area-list .tag:hover {
+      background: #eef4fe; color: var(--accent-ink);
+      border-color: var(--accent); transform: translateY(-2px);
+    }
+
+    /* ----- Final CTA: contain the close inside a sticker card on the cream ----- */
+    .final .wrap {
+      max-width: 720px;
+      background: var(--white);
+      border: 2.5px solid var(--ink);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+      padding: 56px 48px 52px;
+    }
+    .final .offer-stack, .final .book-form { box-shadow: var(--shadow-sm); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .card, .card::before, .card .icon, .quote, .area-list .tag { transition: none; }
+    }
+  }
+
   /* ============ Accessibility widget ============ */
   .a11y-widget { font-family: "Poppins", system-ui, sans-serif; }
 
