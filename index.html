@@ -281,7 +281,42 @@
   /* ---------- Final CTA ---------- */
   .final { text-align: center; }
   .final h2 { font-size: clamp(2.2rem, 6vw, 3.4rem); max-width: 16ch; margin: 0 auto; }
-  .final p { margin: 22px auto 40px; font-size: 1.2rem; max-width: 38ch; }
+  .final p { margin: 22px auto 16px; font-size: 1.2rem; max-width: 38ch; }
+
+  /* ---------- Offer stack (the "here's what you get" card) ---------- */
+  .offer-stack {
+    max-width: 540px; margin: 30px auto 26px; text-align: center;
+    background: var(--white);
+    border: 2.5px solid var(--ink);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+    padding: 32px 30px 30px;
+  }
+  .offer-badge {
+    display: inline-block;
+    background: var(--accent-ink); color: #fff;
+    font-weight: 700; font-size: 0.78rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    border-radius: 999px; padding: 8px 16px; margin-bottom: 18px;
+  }
+  .offer-stack h3 { font-size: 1.5rem; line-height: 1.1; margin-bottom: 8px; }
+  .offer-stack .offer-sub { font-size: 0.98rem; color: var(--body); margin: 0 0 24px; }
+  .offer-includes { list-style: none; text-align: left; display: grid; gap: 13px; margin: 0 0 22px; padding: 0; }
+  .offer-includes li { display: flex; align-items: flex-start; gap: 12px; font-size: 1rem; color: var(--ink-soft); }
+  .offer-includes .tick {
+    flex: 0 0 auto; width: 24px; height: 24px; border-radius: 50%;
+    background: var(--accent); color: #fff;
+    display: flex; align-items: center; justify-content: center; margin-top: 1px;
+  }
+  .offer-guarantee {
+    display: flex; align-items: flex-start; gap: 12px; text-align: left;
+    background: #eef4fe; border: 1.5px solid #cfe0fb; border-radius: 14px;
+    padding: 15px 17px; margin: 0 0 18px;
+  }
+  .offer-guarantee svg { flex: 0 0 auto; color: var(--accent-ink); margin-top: 1px; }
+  .offer-guarantee p { margin: 0; font-size: 0.95rem; color: var(--ink-soft); line-height: 1.5; }
+  .offer-guarantee strong { color: var(--ink); }
+  .offer-stack .offer-claim { margin: 0; font-size: 0.95rem; font-weight: 600; color: var(--ink); }
 
   /* ---------- Booking form (sticker card, left-aligned fields) ---------- */
   .book-form {
@@ -912,7 +947,28 @@
     <div class="wrap">
       <p class="eyebrow reveal" style="text-align:center;">Ready when you are</p>
       <h2 class="reveal">Ready for happier walks?</h2>
-      <p class="reveal">Tell me a little about your dog and I'll take it from there. I only take on a few new dogs at a time, so do get in touch early.</p>
+      <p class="reveal">I only take on a few new dogs at a time, so the start is calm and personal. Here's exactly what you get.</p>
+
+      <!-- OFFER STACK: the value laid out before the form. The guarantee line is a
+           business decision, keep, soften or remove it to suit what you're happy to stand behind. -->
+      <div class="offer-stack reveal">
+        <span class="offer-badge">Free meet &amp; greet</span>
+        <h3>Your dog's settling-in start</h3>
+        <p class="offer-sub">No contracts, no pressure. Just everything your dog needs to get going.</p>
+        <ul class="offer-includes">
+          <li><span class="tick"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span>A free home meet and greet, so your dog meets me before anything is agreed</li>
+          <li><span class="tick"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span>A walk plan built around your dog's pace, energy and funny little habits</li>
+          <li><span class="tick"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span>A photo and a quick note after every single walk</li>
+          <li><span class="tick"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span>Flexible days and times you can change whenever life does</li>
+          <li><span class="tick"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span>Fully insured and DBS checked, every single walk</li>
+          <li><span class="tick"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span>No contracts and no notice periods, so you stay because it's working</li>
+        </ul>
+        <div class="offer-guarantee">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          <p><strong>If your dog's first walk isn't right, you don't pay for it.</strong> That's the only risk in giving me a go, and it's mine, not yours.</p>
+        </div>
+        <p class="offer-claim">Tell me a bit about your dog below to claim your free meet &amp; greet.</p>
+      </div>
 
       <!-- BOOKING FORM
            Replace YOUR_FORM_ID below with your Formspree form ID (formspree.io → New form).
