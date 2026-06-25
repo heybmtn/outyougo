@@ -399,11 +399,42 @@
   .form-status.error { color: #b4232a; }
   .form-note { margin: 14px 0 0; font-size: 0.85rem; color: var(--body); text-align: center; }
 
+  /* ----- Stepped booking form ----- */
+  .bf-progress { display: flex; gap: 6px; margin: 0 0 14px; }
+  .bf-seg {
+    flex: 1; height: 6px; border-radius: 999px;
+    background: var(--pill); transition: background .25s ease;
+  }
+  .bf-seg.is-on { background: var(--accent); }
+  .bf-stepcount {
+    font-weight: 700; font-size: 0.78rem; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--accent-ink); margin: 0 0 20px;
+  }
+  .bf-step[hidden] { display: none; }
+  .bf-step > :first-child { margin-top: 0; }
+  .bf-step fieldset:last-child,
+  .bf-step .field:last-child { margin-bottom: 0; }
+
+  .bf-nav { display: flex; gap: 12px; margin-top: 24px; }
+  .bf-nav .btn { width: auto; flex: 1; }
+  .bf-nav .btn[hidden] { display: none; }   /* beat .btn's display:inline-flex */
+  .bf-back {
+    flex: 0 0 auto; font-family: inherit; font-weight: 700; font-size: 1rem;
+    color: var(--ink); background: var(--white);
+    border: 2.5px solid var(--ink); border-radius: 14px;
+    padding: 0 22px; min-height: 54px; cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: transform .14s ease, box-shadow .14s ease;
+  }
+  .bf-back:hover, .bf-back:focus-visible { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
+  .bf-back:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--ink); }
+
   @media (max-width: 480px) {
     .book-form { padding: 24px 20px; }
     .book-form .two { grid-template-columns: 1fr; gap: 0; }
     .walk-opts { grid-template-columns: 1fr; }
     .day-opts { grid-template-columns: repeat(4, 1fr); }
+    .bf-back { padding: 0 18px; }
   }
 
   /* ---------- Footer ---------- */
@@ -476,18 +507,11 @@
       border: 2px solid var(--line);
       transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
     }
-    .card::before {
-      content: ""; position: absolute; top: 0; left: 0; right: 0; height: 5px;
-      background: var(--accent);
-      transform: scaleX(0); transform-origin: left;
-      transition: transform .22s ease;
-    }
     .card:hover {
       transform: translate(-3px, -3px);
       box-shadow: var(--shadow);
       border-color: var(--ink);
     }
-    .card:hover::before { transform: scaleX(1); }
     .card:hover .icon { transform: rotate(-6deg) scale(1.04); }
     .card .icon { transition: transform .2s ease; }
     .card .price {
@@ -909,10 +933,7 @@
         <h1 class="reveal">Happy dogs, <span class="accent">well walked.</span></h1>
         <p class="lead reveal">Friendly, reliable dog walking in Woodstock and the villages around it. Fully insured, DBS checked, and genuinely dog mad.</p>
         <div class="cta-row reveal">
-          <a class="btn" href="#book">Meet &amp; greet</a>
-          <a class="hero-play" href="#game">Play a game
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
+          <a class="btn" href="#book">Book a meet &amp; greet</a>
         </div>
       </div>
       <div class="hero-media reveal">
@@ -1079,86 +1100,105 @@
            show an inline success message; if JS is off, it falls back to Formspree's own page. -->
       <form class="book-form reveal" id="bookForm" method="POST"
             action="https://formspree.io/f/YOUR_FORM_ID">
-        <div class="two">
-          <div class="field">
-            <label for="bf-name">Your name <span class="req" aria-hidden="true">*</span></label>
-            <input type="text" id="bf-name" name="name" autocomplete="name" required />
-          </div>
-          <div class="field">
-            <label for="bf-phone">Phone <span class="req" aria-hidden="true">*</span></label>
-            <input type="tel" id="bf-phone" name="phone" autocomplete="tel" required />
-          </div>
+
+        <!-- Progress: visual bar is decorative; the step count below is the
+             accessible announcement (aria-live) for screen-reader users. -->
+        <div class="bf-progress" aria-hidden="true">
+          <span class="bf-seg"></span>
+          <span class="bf-seg"></span>
+          <span class="bf-seg"></span>
         </div>
+        <p class="bf-stepcount" id="bfStepCount" aria-live="polite">Step 1 of 3 &middot; Your dog</p>
 
-        <div class="field">
-          <label for="bf-email">Email <span class="req" aria-hidden="true">*</span></label>
-          <input type="email" id="bf-email" name="email" autocomplete="email" required />
-        </div>
+        <div class="bf-steps">
 
-        <div class="two">
-          <div class="field">
-            <label for="bf-dog">Dog's name</label>
-            <input type="text" id="bf-dog" name="dog-name" />
+          <!-- STEP 1 — about the dog (easy, low-friction questions first) -->
+          <div class="bf-step" data-step="1">
+            <div class="two">
+              <div class="field">
+                <label for="bf-dog">Dog's name</label>
+                <input type="text" id="bf-dog" name="dog-name" />
+              </div>
+              <div class="field">
+                <label for="bf-breed">Breed</label>
+                <input type="text" id="bf-breed" name="breed" />
+              </div>
+            </div>
+            <fieldset>
+              <legend>Which walk suits you?</legend>
+              <div class="walk-opts">
+                <label class="walk-opt">
+                  <input type="radio" name="walk" value="30 minute walk" checked />
+                  <span>30 min walk</span>
+                </label>
+                <label class="walk-opt">
+                  <input type="radio" name="walk" value="60 minute walk" />
+                  <span>60 min walk</span>
+                </label>
+                <label class="walk-opt">
+                  <input type="radio" name="walk" value="Puppy comfort break" />
+                  <span>Puppy break</span>
+                </label>
+              </div>
+            </fieldset>
           </div>
-          <div class="field">
-            <label for="bf-breed">Breed</label>
-            <input type="text" id="bf-breed" name="breed" />
-          </div>
-        </div>
 
-        <fieldset>
-          <legend>Which walk suits you?</legend>
-          <div class="walk-opts">
-            <label class="walk-opt">
-              <input type="radio" name="walk" value="30 minute walk" checked />
-              <span>30 min walk</span>
-            </label>
-            <label class="walk-opt">
-              <input type="radio" name="walk" value="60 minute walk" />
-              <span>60 min walk</span>
-            </label>
-            <label class="walk-opt">
-              <input type="radio" name="walk" value="Puppy comfort break" />
-              <span>Puppy break</span>
-            </label>
+          <!-- STEP 2 — when -->
+          <div class="bf-step" data-step="2" hidden>
+            <fieldset>
+              <legend>Which days?</legend>
+              <div class="day-opts">
+                <label class="day-opt"><input type="checkbox" name="days" value="Monday" /><span>Mon</span></label>
+                <label class="day-opt"><input type="checkbox" name="days" value="Tuesday" /><span>Tue</span></label>
+                <label class="day-opt"><input type="checkbox" name="days" value="Wednesday" /><span>Wed</span></label>
+                <label class="day-opt"><input type="checkbox" name="days" value="Thursday" /><span>Thu</span></label>
+                <label class="day-opt"><input type="checkbox" name="days" value="Friday" /><span>Fri</span></label>
+                <label class="day-opt"><input type="checkbox" name="days" value="Saturday" /><span>Sat</span></label>
+                <label class="day-opt"><input type="checkbox" name="days" value="Sunday" /><span>Sun</span></label>
+              </div>
+              <button type="button" class="day-all" id="bfDayAll" aria-pressed="false">Select all</button>
+            </fieldset>
+            <fieldset>
+              <legend>Preferred time</legend>
+              <div class="walk-opts">
+                <label class="walk-opt">
+                  <input type="checkbox" name="time" value="Morning" />
+                  <span>Morning</span>
+                </label>
+                <label class="walk-opt">
+                  <input type="checkbox" name="time" value="Afternoon" />
+                  <span>Afternoon</span>
+                </label>
+                <label class="walk-opt">
+                  <input type="checkbox" name="time" value="Evening" />
+                  <span>Evening</span>
+                </label>
+              </div>
+            </fieldset>
           </div>
-        </fieldset>
 
-        <fieldset>
-          <legend>Which days?</legend>
-          <div class="day-opts">
-            <label class="day-opt"><input type="checkbox" name="days" value="Monday" /><span>Mon</span></label>
-            <label class="day-opt"><input type="checkbox" name="days" value="Tuesday" /><span>Tue</span></label>
-            <label class="day-opt"><input type="checkbox" name="days" value="Wednesday" /><span>Wed</span></label>
-            <label class="day-opt"><input type="checkbox" name="days" value="Thursday" /><span>Thu</span></label>
-            <label class="day-opt"><input type="checkbox" name="days" value="Friday" /><span>Fri</span></label>
-            <label class="day-opt"><input type="checkbox" name="days" value="Saturday" /><span>Sat</span></label>
-            <label class="day-opt"><input type="checkbox" name="days" value="Sunday" /><span>Sun</span></label>
+          <!-- STEP 3 — your details (contact info comes last, once engaged) -->
+          <div class="bf-step" data-step="3" hidden>
+            <div class="two">
+              <div class="field">
+                <label for="bf-name">Your name <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="bf-name" name="name" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="bf-phone">Phone <span class="req" aria-hidden="true">*</span></label>
+                <input type="tel" id="bf-phone" name="phone" autocomplete="tel" required />
+              </div>
+            </div>
+            <div class="field">
+              <label for="bf-email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="bf-email" name="email" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="bf-msg">Anything I should know?</label>
+              <textarea id="bf-msg" name="message" placeholder="Your dog's routine, anything else I should know."></textarea>
+            </div>
           </div>
-          <button type="button" class="day-all" id="bfDayAll" aria-pressed="false">Select all</button>
-        </fieldset>
 
-        <fieldset>
-          <legend>Preferred time</legend>
-          <div class="walk-opts">
-            <label class="walk-opt">
-              <input type="checkbox" name="time" value="Morning" />
-              <span>Morning</span>
-            </label>
-            <label class="walk-opt">
-              <input type="checkbox" name="time" value="Afternoon" />
-              <span>Afternoon</span>
-            </label>
-            <label class="walk-opt">
-              <input type="checkbox" name="time" value="Evening" />
-              <span>Evening</span>
-            </label>
-          </div>
-        </fieldset>
-
-        <div class="field">
-          <label for="bf-msg">Anything I should know?</label>
-          <textarea id="bf-msg" name="message" placeholder="Your dog's routine, anything else I should know."></textarea>
         </div>
 
         <!-- Honeypot: real visitors leave this blank -->
@@ -1166,7 +1206,11 @@
                style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" />
         <input type="hidden" name="_subject" value="New meet &amp; greet request from outyougo.co.uk" />
 
-        <button class="btn" type="submit">Request a meet &amp; greet</button>
+        <div class="bf-nav">
+          <button type="button" class="bf-back" id="bfBack" hidden>Back</button>
+          <button type="button" class="btn" id="bfNext">Next</button>
+          <button class="btn" type="submit" id="bfSubmit" hidden>Request a meet &amp; greet</button>
+        </div>
         <p class="form-status" id="bfStatus" role="status" aria-live="polite"></p>
         <p class="form-note">No obligation. I'll reply within a day to arrange a free visit.</p>
       </form>
@@ -1791,15 +1835,55 @@
   </script>
 
   <script>
-    // ===== Booking form (Formspree, with graceful fallback) =====
+    // ===== Booking form (stepped, Formspree with graceful fallback) =====
     (function () {
       const form = document.getElementById('bookForm');
       if (!form) return;
       const status = document.getElementById('bfStatus');
-      const btn = form.querySelector('button[type="submit"]');
-      const label = btn.textContent;
 
-      // Days "Select all" toggle
+      // ----- Multi-step controller -----
+      const steps     = Array.prototype.slice.call(form.querySelectorAll('.bf-step'));
+      const segs      = Array.prototype.slice.call(form.querySelectorAll('.bf-seg'));
+      const countEl   = document.getElementById('bfStepCount');
+      const backBtn   = document.getElementById('bfBack');
+      const nextBtn   = document.getElementById('bfNext');
+      const submitBtn = document.getElementById('bfSubmit');
+      const titles    = ['Your dog', 'When works for you', 'Your details'];
+      let cur = 0;
+
+      function render() {
+        steps.forEach(function (s, i) { s.hidden = i !== cur; });
+        segs.forEach(function (s, i) { s.classList.toggle('is-on', i <= cur); });
+        countEl.textContent = 'Step ' + (cur + 1) + ' of ' + steps.length + ' \u00B7 ' + titles[cur];
+        const last = cur === steps.length - 1;
+        backBtn.hidden = cur === 0;
+        nextBtn.hidden = last;
+        submitBtn.hidden = !last;
+      }
+      function focusStep() {
+        const t = steps[cur].querySelector('input:not([type=hidden]), textarea, select, button');
+        if (t) t.focus();
+      }
+      // Validate only the current step before letting the visitor move on.
+      function validStep(i) {
+        const fields = steps[i].querySelectorAll('input, textarea, select');
+        for (let k = 0; k < fields.length; k++) {
+          if (!fields[k].checkValidity()) { fields[k].reportValidity(); return false; }
+        }
+        return true;
+      }
+      nextBtn.addEventListener('click', function () {
+        if (!validStep(cur)) return;
+        cur = Math.min(steps.length - 1, cur + 1);
+        render(); focusStep();
+      });
+      backBtn.addEventListener('click', function () {
+        cur = Math.max(0, cur - 1);
+        render(); focusStep();
+      });
+      render();
+
+      // ----- Days "Select all" toggle -----
       const allBtn = form.querySelector('#bfDayAll');
       const days = Array.prototype.slice.call(form.querySelectorAll('input[name="days"]'));
       function syncDays() {
@@ -1817,11 +1901,12 @@
         syncDays();
       }
 
+      // ----- Submit (Formspree, with graceful fallback) -----
+      const label = submitBtn.textContent;
       function show(msg, kind) {
         status.textContent = msg;
         status.className = 'form-status show ' + kind;
       }
-
       form.addEventListener('submit', async function (e) {
         // While the form ID is still the placeholder, let the normal POST happen
         // so it's obvious the form needs wiring up.
@@ -1829,8 +1914,8 @@
         e.preventDefault();
         if (!form.reportValidity()) return;
 
-        btn.disabled = true;
-        btn.textContent = 'Sending…';
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending\u2026';
         try {
           const res = await fetch(form.action, {
             method: 'POST',
@@ -1839,6 +1924,7 @@
           });
           if (res.ok) {
             form.reset();
+            cur = 0; render();
             show("Thanks, that's with me. I'll be in touch within a day to arrange your free meet and greet.", 'ok');
           } else {
             const data = await res.json().catch(function () { return {}; });
@@ -1850,8 +1936,8 @@
         } catch (err) {
           show("Couldn't send just now. Please call or email me instead.", 'error');
         } finally {
-          btn.disabled = false;
-          btn.textContent = label;
+          submitBtn.disabled = false;
+          submitBtn.textContent = label;
         }
       });
     })();
